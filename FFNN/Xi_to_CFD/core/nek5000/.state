@@ -1,0 +1,9 @@
+NEK_SOURCE_ROOT=/home/sam/Nek5000
+FC=/usr/bin/mpif77
+FFLAGS=
+FCPP=-cpp
+FR8=-fdefault-real-8 -fdefault-double-8
+FF77=-std=legacy
+CC=/usr/bin/mpicc
+CFLAGS=
+PPLIST= MPI UNDERSCORE GLOBAL_LONG_LONG TIMER

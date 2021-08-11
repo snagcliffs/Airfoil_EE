@@ -1,0 +1,1711 @@
+/----------------------------------------------------------\\
+|      _   __ ______ __ __  ______  ____   ____   ____     |
+|     / | / // ____// //_/ / ____/ / __ \\/ __ \\/ __ \\   |
+|    /  |/ // __/  / ,<   /___ \\ / / / // / / // / / /    |
+|   / /|  // /___ / /| | ____/ / / /_/ // /_/ // /_/ /     |
+|  /_/ |_//_____//_/ |_|/_____/  \\___/ \\___/ \\___/      |
+|                                                          |
+|----------------------------------------------------------|
+|                                                          |
+| COPYRIGHT (c) 2008-2019 UCHICAGO ARGONNE, LLC            |
+| Version:  19.0                                           |
+| Web:      https://nek5000.mcs.anl.gov                    |
+|                                                          |
+\\----------------------------------------------------------/
+
+ Number of MPI ranks :          16
+  
+ Reading /home/shrudy/Nek5000/run/new_Airfoil/POD/Psi_hat_to_CFD/core/nek5000/airfoil.par                                                    
+general = [(null)]
+general:startfrom = [POD_restart0.f00000]
+general:stopat = [numSteps]
+general:numsteps = [10500]
+general:dt = [0.001]
+general:variabledt = [no]
+general:targetcfl = [3.0]
+general:timestepper = [BDF2]
+general:extrapolation = [OIFS]
+general:writecontrol = [runTime]
+general:writeinterval = [1000]
+general:dealiasing = [yes]
+general:filtering = [explicit]
+general:filterweight = [0.02]
+general:filtercutoffratio = [0.65]
+problemtype = [(null)]
+problemtype:equation = [incompNS]
+problemtype:stressformulation = [no]
+pressure = [(null)]
+pressure:residualtol = [1e-8]
+pressure:residualproj = [yes]
+velocity = [(null)]
+velocity:residualtol = [1e-8]
+velocity:residualproj = [no]
+velocity:density = [1.0]
+velocity:viscosity = [5.714285714285714e-05]
+velocity:advection = [yes]
+ Reading /home/shrudy/Nek5000/run/new_Airfoil/POD/Psi_hat_to_CFD/core/nek5000/airfoil.re2                                                    
+ nelgt/nelgv/lelt:        4368        4368        1878
+ lx1  /lx2  /lx3 :           8           8           8
+
+ partioning elements to MPI ranks
+ Reading /home/shrudy/Nek5000/run/new_Airfoil/POD/Psi_hat_to_CFD/core/nek5000/airfoil.ma2                                                    
+ Max neighbors: 8 | Min neighbors: 3 | Avg neighbors: 5.375000
+ Max nvolume: 22 | Min nvolume: 1 | Avg nvolume: 10.250000
+ Max volume: 76 | Min volume: 37 | Avg volume: 56.125000
+ Max elements: 273 | Min elements: 273 | Balance: 1.000000
+  
+ done :: partioning   0.28532E-02 sec
+
+  preading mesh 
+  preading curved sides 
+  preading bc for ifld           1
+ done :: read .re2 file    0.37E-02 sec
+
+ RK4 substeps:           2
+ setup mesh topology
+   Right-handed check complete for        4368 elements. OK.
+   setvert2d:   8       57750      214998       57750       57750
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 2840 unique labels shared
+   pairwise times (avg, min, max): 1.22637e-05 1.10865e-05 1.29938e-05
+   crystal router                : 1.53676e-05 1.51157e-05 1.55926e-05
+   all reduce                    : 0.000221452 0.000221109 0.000221896
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 93839 90932 96828
+   buffer bytes (avg, min, max): 5770 3856 7744
+   setupds time 9.6240E-03 seconds   0  8       57750        4368
+           4  max multiplicity
+ done :: setup mesh topology
+  
+ call usrdat
+ done :: usrdat
+
+ generate geometry data
+ NOTE: All elements deformed , param(59) ^=0
+ done :: generate geometry data
+  
+ call usrdat2
+ done :: usrdat2
+
+  1.1102E-16  1.1102E-16  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00 xyz repair 1
+  1.1102E-16  1.1102E-16  0.0000E+00  1.7671E-16  1.1102E-16  0.0000E+00 xyz repair 2
+  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00 xyz repair 3
+ regenerate geometry data           1
+ NOTE: All elements deformed , param(59) ^=0
+ done :: regenerate geometry data           1
+  
+ regenerate geometry data           1
+ NOTE: All elements deformed , param(59) ^=0
+ done :: regenerate geometry data           1
+  
+ verify mesh topology
+  -2.0000000000000000        6.7500000000000000       Xrange
+  -2.5000000000000000        2.5000000000000000       Yrange
+   0.0000000000000000        0.0000000000000000       Zrange
+ done :: verify mesh topology
+  
+ mesh metrics:
+ GLL grid spacing min/max    : 4.09E-04-1.00E+00
+ scaled Jacobian  min/max/avg: 7.26E-01 9.98E-01 9.57E-01
+ aspect ratio     min/max/avg: 1.00E+00 6.51E+00 2.53E+00
+
+ IFTRAN    = T
+ IFFLOW    = T
+ IFHEAT    = F
+ IFSPLIT   = T
+ IFLOMACH  = F
+ IFUSERVP  = F
+ IFUSERMV  = F
+ IFPERT    = F
+ IFADJ     = F
+ IFSTRS    = F
+ IFCHAR    = T
+ IFCYCLIC  = F
+ IFAXIS    = F
+ IFMVBD    = F
+ IFMELT    = F
+ IFNEKNEK  = F
+ IFNEKNEKC = F
+ IFSYNC    = F
+   
+ IFVCOR    = F
+ IFINTQ    = F
+ IFGEOM    = F
+ IFSURT    = F
+ IFWCNO    = F
+   
+ IFTMSH for field           1    =  F
+ IFADVC for field           1    =  T
+ IFNONL for field           1    =  F
+   
+ Dealiasing enabled, lxd=          10
+  
+ Estimated eigenvalues
+ EIGAA =   0.26184664737584012     
+ EIGGA =    38977282.143527456     
+ EIGAE =   0.12890911870810590     
+ EIGAS =    6.1538461538461542E-002
+ EIGGE =    38977282.143527456     
+ EIGGS =    2.0000000000000000     
+  
+ initialize pressure solver
+ mg_nx:           1           3           7
+ mg_ny:           1           3           7
+ mg_nz:           0           0           0
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 404 unique labels shared
+   pairwise times (avg, min, max): 4.47035e-06 4.1008e-06 4.79221e-06
+   crystal router                : 5.29289e-06 5.19753e-06 5.4121e-06
+   all reduce                    : 1.41352e-05 1.38998e-05 1.43051e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 12803 12308 13308
+   buffer bytes (avg, min, max): 898 592 1216
+   setupds time 1.0641E-03 seconds   1  2        4506        4368
+   setvert2d:   4       22254       39726       22254       22254
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 1216 unique labels shared
+   pairwise times (avg, min, max): 5.41061e-06 4.88758e-06 5.79357e-06
+   crystal router                : 6.89328e-06 6.79493e-06 7.00951e-06
+   all reduce                    : 3.38584e-05 3.34978e-05 3.43084e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 39815 38516 41148
+   buffer bytes (avg, min, max): 2522 1680 3392
+   setupds time 2.7659E-03 seconds   2  4       22254        4368
+   setvert2d:   4       22254       39726       22254       22254
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 1216 unique labels shared
+   pairwise times (avg, min, max): 5.2169e-06 4.69685e-06 5.50747e-06
+   crystal router                : 6.94394e-06 6.8903e-06 6.98566e-06
+   all reduce                    : 3.37198e-05 3.34978e-05 3.40939e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 39815 38516 41148
+   buffer bytes (avg, min, max): 2522 1680 3392
+   setupds time 2.6009E-03 seconds   3  4       22254        4368
+   setvert2d:   6       40002      109890       40002       40002
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 2028 unique labels shared
+   pairwise times (avg, min, max): 6.00815e-06 5.60284e-06 6.38962e-06
+   crystal router                : 9.33707e-06 9.20296e-06 9.41753e-06
+   all reduce                    : 5.93483e-05 5.9104e-05 5.96046e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 66827 64724 68988
+   buffer bytes (avg, min, max): 4146 2768 5568
+   setupds time 3.6910E-03 seconds   4  6       40002        4368
+ regenerate geometry data           1
+ NOTE: All elements deformed , param(59) ^=0
+ done :: regenerate geometry data           1
+  
+ h1_mg_nx:           1           3           7
+ h1_mg_ny:           1           3           7
+ h1_mg_nz:           0           0           0
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 404 unique labels shared
+   pairwise times (avg, min, max): 4.40627e-06 4.00543e-06 4.72069e-06
+   crystal router                : 4.95315e-06 4.91142e-06 5.00679e-06
+   all reduce                    : 1.23084e-05 1.2207e-05 1.23978e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 12803 12308 13308
+   buffer bytes (avg, min, max): 898 592 1216
+   setupds time 8.9812E-04 seconds   5  2        4506        4368
+   setvert2d:   4       22254       39726       22254       22254
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 1216 unique labels shared
+   pairwise times (avg, min, max): 5.16176e-06 4.69685e-06 5.57899e-06
+   crystal router                : 6.62059e-06 6.48499e-06 6.69956e-06
+   all reduce                    : 3.17663e-05 3.15905e-05 3.19958e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 39815 38516 41148
+   buffer bytes (avg, min, max): 2522 1680 3392
+   setupds time 2.4829E-03 seconds   6  4       22254        4368
+   setvert2d:   4       22254       39726       22254       22254
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 1216 unique labels shared
+   pairwise times (avg, min, max): 5.04702e-06 4.69685e-06 5.31673e-06
+   crystal router                : 6.91265e-06 6.79493e-06 7.00951e-06
+   all reduce                    : 3.16501e-05 3.13997e-05 3.20911e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 39815 38516 41148
+   buffer bytes (avg, min, max): 2522 1680 3392
+   setupds time 2.3890E-03 seconds   7  4       22254        4368
+   setvert2d:   6       40002      109890       40002       40002
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 2028 unique labels shared
+   pairwise times (avg, min, max): 5.74738e-06 5.29289e-06 6.10352e-06
+   crystal router                : 8.23885e-06 8.10623e-06 8.32081e-06
+   all reduce                    : 5.84453e-05 5.8198e-05 5.86987e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 66827 64724 68988
+   buffer bytes (avg, min, max): 4146 2768 5568
+   setupds time 3.4261E-03 seconds   8  6       40002        4368
+   setvert2d:   8       57750      214998       57750       57750
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 2840 unique labels shared
+   pairwise times (avg, min, max): 5.72801e-06 5.38826e-06 6.10352e-06
+   crystal router                : 1.06782e-05 1.05858e-05 1.08004e-05
+   all reduce                    : 6.88851e-05 6.8593e-05 6.91891e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 93839 90932 96828
+   buffer bytes (avg, min, max): 5770 3856 7744
+   setupds time 4.3440E-03 seconds   9  8       57750        4368
+   setvert2d:  10       75498      355050       75498       75498
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 3652 unique labels shared
+   pairwise times (avg, min, max): 6.49989e-06 6.10352e-06 6.8903e-06
+   crystal router                : 1.11505e-05 1.09911e-05 1.13964e-05
+   all reduce                    : 8.12829e-05 8.08954e-05 8.15868e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 120851 117140 124668
+   buffer bytes (avg, min, max): 7394 4944 9920
+   setupds time 5.0621E-03 seconds  10 10       75498        4368
+ setup h1 coarse grid, nx_crs=           2
+ call usrsetvert
+ done :: usrsetvert
+
+gs_setup: 404 unique labels shared
+   pairwise times (avg, min, max): 3.91006e-06 3.60012e-06 4.19617e-06
+   crystal router                : 5.00679e-06 4.88758e-06 5.07832e-06
+   all reduce                    : 1.16363e-05 1.15871e-05 1.17064e-05
+   used all_to_all method: pairwise
+   handle bytes (avg, min, max): 12803 12308 13308
+   buffer bytes (avg, min, max): 898 592 1216
+ done :: setup h1 coarse grid    8.6269378662109375E-003  sec
+  
+ call usrdat3
+ done :: usrdat3
+
+ set initial conditions
+ Checking restart options: POD_restart0.f00000                                                                                                                 
+ nekuic (1) for ifld            1
+ Reading checkpoint data 
+       FILE:/home/shrudy/Nek5000/run/new_Airfoil/POD/Psi_hat_to_CFD/core/nek5000/POD_restart0.f00000                                            
+
+        0  0.0000E+00 done :: Read checkpoint data
+                              avg data-throughput =  4276.5MBps
+                              io-nodes =    16
+
+ xyz min    -2.0000      -2.5000       0.0000    
+ uvwpt min -0.93650     -0.85316       0.0000       0.0000       0.0000    
+ xyz max     6.7500       2.5000       0.0000    
+ uvwpt max   1.6997       1.1720       0.0000       0.0000       0.0000    
+ Restart: recompute geom. factors.
+ regenerate geometry data           1
+ NOTE: All elements deformed , param(59) ^=0
+ done :: regenerate geometry data           1
+  
+ done :: set initial conditions
+  
+ call userchk
+       0  0.00000000000E+00  2.27414743065E-02  0.00000000000E+00  2.27414743065E-02      1dragx
+       0  0.00000000000E+00  2.14212369156E-03  0.00000000000E+00  2.14212369156E-03      1dragy
+       0  0.00000000000E+00 -1.50674942312E-03  0.00000000000E+00 -1.50674942312E-03      1torqz
+ done :: userchk
+
+gridpoints unique/tot:        214998       279552
+dofs vel/pr:                  214507       214633
+  
+ Initialization successfully completed   0.17473     sec
+
+Starting time loop ...
+
+     DT/DTCFL/DTFS/DTINIT   0.100E-02   0.247-322   0.000E+00   0.100E-02
+Step      1, t= 1.0000000E-03, DT= 1.0000000E-03, C=  2.079 0.0000E+00 0.0000E+00
+             Solving for fluid
+    1 1.00000E-08 1.47287E-01 1.69900E-01 8.66903E-01       1 Divergence
+    2 1.00000E-08 1.30504E-01 1.69900E-01 7.68122E-01       1 Divergence
+    3 1.00000E-08 8.30377E-02 1.69900E-01 4.88745E-01       1 Divergence
+    4 1.00000E-08 3.95892E-02 1.69900E-01 2.33015E-01       1 Divergence
+    5 1.00000E-08 1.96481E-02 1.69900E-01 1.15645E-01       1 Divergence
+    6 1.00000E-08 1.07404E-02 1.69900E-01 6.32159E-02       1 Divergence
+    7 1.00000E-08 6.15786E-03 1.69900E-01 3.62440E-02       1 Divergence
+    8 1.00000E-08 3.61930E-03 1.69900E-01 2.13025E-02       1 Divergence
+    9 1.00000E-08 2.21174E-03 1.69900E-01 1.30179E-02       1 Divergence
+   10 1.00000E-08 1.48432E-03 1.69900E-01 8.73643E-03       1 Divergence
+   11 1.00000E-08 9.88232E-04 1.69900E-01 5.81655E-03       1 Divergence
+   12 1.00000E-08 6.06279E-04 1.69900E-01 3.56845E-03       1 Divergence
+   13 1.00000E-08 3.77319E-04 1.69900E-01 2.22083E-03       1 Divergence
+   14 1.00000E-08 2.50583E-04 1.69900E-01 1.47488E-03       1 Divergence
+   15 1.00000E-08 1.65438E-04 1.69900E-01 9.73736E-04       1 Divergence
+   16 1.00000E-08 1.04899E-04 1.69900E-01 6.17419E-04       1 Divergence
+   17 1.00000E-08 6.66266E-05 1.69900E-01 3.92152E-04       1 Divergence
+   18 1.00000E-08 4.30080E-05 1.69900E-01 2.53137E-04       1 Divergence
+   19 1.00000E-08 2.77420E-05 1.69900E-01 1.63285E-04       1 Divergence
+   20 1.00000E-08 1.80411E-05 1.69900E-01 1.06186E-04       1 Divergence
+   21 1.00000E-08 1.16392E-05 1.69900E-01 6.85064E-05       1 Divergence
+   22 1.00000E-08 7.93150E-06 1.69900E-01 4.66833E-05       1 Divergence
+   23 1.00000E-08 5.25353E-06 1.69900E-01 3.09213E-05       1 Divergence
+   24 1.00000E-08 3.34459E-06 1.69900E-01 1.96856E-05       1 Divergence
+   25 1.00000E-08 2.19887E-06 1.69900E-01 1.29421E-05       1 Divergence
+   26 1.00000E-08 1.43515E-06 1.69900E-01 8.44703E-06       1 Divergence
+   27 1.00000E-08 9.25655E-07 1.69900E-01 5.44823E-06       1 Divergence
+   28 1.00000E-08 6.01405E-07 1.69900E-01 3.53976E-06       1 Divergence
+   29 1.00000E-08 3.95582E-07 1.69900E-01 2.32832E-06       1 Divergence
+   30 1.00000E-08 2.50448E-07 1.69900E-01 1.47409E-06       1 Divergence
+   31 1.00000E-08 1.84498E-07 1.69900E-01 1.08592E-06       1 Divergence
+   32 1.00000E-08 1.31758E-07 1.69900E-01 7.75504E-07       1 Divergence
+   33 1.00000E-08 8.90540E-08 1.69900E-01 5.24155E-07       1 Divergence
+   34 1.00000E-08 5.97844E-08 1.69900E-01 3.51880E-07       1 Divergence
+   35 1.00000E-08 3.94175E-08 1.69900E-01 2.32004E-07       1 Divergence
+   36 1.00000E-08 2.53208E-08 1.69900E-01 1.49033E-07       1 Divergence
+   37 1.00000E-08 1.62641E-08 1.69900E-01 9.57274E-08       1 Divergence
+   38 1.00000E-08 1.09815E-08 1.69900E-01 6.46352E-08       1 Divergence
+   39 1.00000E-08 7.19584E-09 1.69900E-01 4.23534E-08       1 Divergence
+          1  PRES gmres        39   7.1958E-09   1.6990E-01   1.0000E-08   5.5916E-02   1.0603E-01    F
+          1  Hmholtz VELX       1   4.3786E-01   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       2   1.0534E-02   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       3   6.1270E-04   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       4   7.3374E-05   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       5   1.3979E-05   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       6   3.0825E-06   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       7   6.2327E-07   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       8   1.5803E-07   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       9   3.3147E-08   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX      10   7.1754E-09   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELX       9   7.1754E-09   4.3786E-01   1.0000E-08
+          1  Hmholtz VELY       1   7.1772E-01   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       2   1.1956E-02   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       3   6.1750E-04   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       4   7.0053E-05   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       5   1.5442E-05   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       6   4.1295E-06   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       7   7.1424E-07   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       8   1.4990E-07   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       9   3.9832E-08   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY      10   7.1451E-09   5.7143E-05   1.0000E-08   1.0000E+03   F
+          1  Hmholtz VELY       9   7.1451E-09   7.1772E-01   1.0000E-08
+             L1/L2 DIV(V)          -3.6864E-07   2.1459E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.6864E-07   2.1459E-02
+          1  Fluid done  1.0000E-03  1.2474E-01
+filt amp 0.0000 0.0000 0.0000 0.0000 0.0000 0.0022 0.0089 0.0200
+filt trn 1.0000 1.0000 1.0000 1.0000 1.0000 0.9978 0.9911 0.9800
+       1  1.00000000000E-03  7.30187233899E-02  5.02918706421E-02  2.27268527479E-02      1dragx
+       1  1.00000000000E-03  7.26738690113E-01  7.24588855119E-01  2.14983499399E-03      1dragy
+       1  1.00000000000E-03  7.89713751161E-02  8.04723381917E-02 -1.50096307555E-03      1torqz
+Step      2, t= 2.0000000E-03, DT= 1.0000000E-03, C=  2.079 1.4653E-01 1.4653E-01
+             Solving for fluid
+          2  PRES gmres        30   6.5478E-09   2.1617E-02   1.0000E-08   4.1714E-02   8.1023E-02    F
+          2  Hmholtz VELX       8   5.8259E-09   6.5664E-01   1.0000E-08
+          2  Hmholtz VELY       8   5.7684E-09   1.0769E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.4828E-07   2.0362E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.4828E-07   2.0362E-02
+          2  Fluid done  2.0000E-03  9.7646E-02
+       2  2.00000000000E-03  7.23437108966E-02  4.96444214147E-02  2.26992894819E-02      1dragx
+       2  2.00000000000E-03  7.24809513316E-01  7.22657904813E-01  2.15160850349E-03      1dragy
+       2  2.00000000000E-03  7.91596580473E-02  8.06602895235E-02 -1.50063147618E-03      1torqz
+Step      3, t= 3.0000000E-03, DT= 1.0000000E-03, C=  2.079 2.7771E-01 1.3119E-01
+             Solving for fluid
+          3  PRES gmres        29   7.3513E-09   1.1815E-02   1.0000E-08   4.0042E-02   7.6933E-02    F
+          3  Hmholtz VELX       8   3.0348E-09   6.5671E-01   1.0000E-08
+          3  Hmholtz VELY       8   3.9085E-09   1.0772E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.2771E-07   2.0064E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.2771E-07   2.0064E-02
+          3  Fluid done  3.0000E-03  9.3477E-02
+       3  3.00000000000E-03  7.22122164074E-02  4.95394823544E-02  2.26727340529E-02      1dragx
+       3  3.00000000000E-03  7.24715474677E-01  7.22564476516E-01  2.15099816102E-03      1dragy
+       3  3.00000000000E-03  7.90434780344E-02  8.05441743378E-02 -1.50069630341E-03      1torqz
+Step      4, t= 4.0000000E-03, DT= 1.0000000E-03, C=  2.079 4.0491E-01 1.2719E-01
+             Solving for fluid
+          4  PRES gmres        28   9.2898E-09   8.2270E-03   1.0000E-08   3.8214E-02   7.2016E-02    F
+          4  Hmholtz VELX       8   2.7770E-09   6.5681E-01   1.0000E-08
+          4  Hmholtz VELY       8   4.4765E-09   1.0775E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.0642E-07   2.0021E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.0642E-07   2.0021E-02
+          4  Fluid done  4.0000E-03  8.8434E-02
+       4  4.00000000000E-03  7.23933811797E-02  4.97491251200E-02  2.26442560598E-02      1dragx
+       4  4.00000000000E-03  7.25565440883E-01  7.23411674081E-01  2.15376680192E-03      1dragy
+       4  4.00000000000E-03  7.95656513593E-02  8.10654421248E-02 -1.49979076556E-03      1torqz
+Step      5, t= 5.0000000E-03, DT= 1.0000000E-03, C=  2.079 5.2693E-01 1.2203E-01
+             Solving for fluid
+          5  PRES gmres        28   9.4388E-09   7.6001E-03   1.0000E-08   3.7815E-02   7.0865E-02    F
+          5  Hmholtz VELX       8   2.0733E-09   6.5693E-01   1.0000E-08
+          5  Hmholtz VELY       8   3.7870E-09   1.0777E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.8452E-07   1.9906E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.8452E-07   1.9906E-02
+          5  Fluid done  5.0000E-03  8.8209E-02
+       5  5.00000000000E-03  7.25368146704E-02  4.99197918511E-02  2.26170228193E-02      1dragx
+       5  5.00000000000E-03  7.26880533046E-01  7.24723362614E-01  2.15717043143E-03      1dragy
+       5  5.00000000000E-03  8.01637936150E-02  8.16620634267E-02 -1.49826981175E-03      1torqz
+Step      6, t= 6.0000000E-03, DT= 1.0000000E-03, C=  2.078 6.4865E-01 1.2172E-01
+             Solving for fluid
+          6  Project PRES           1.7968E-02   5.0393E-02   2.8046E+00   1   8
+          6  PRES gmres        21   7.4575E-09   2.7191E-03   1.0000E-08   2.8410E-02   4.9599E-02    F
+          6  Hmholtz VELX       7   9.9218E-09   6.5706E-01   1.0000E-08
+          6  Hmholtz VELY       8   3.5644E-09   1.0780E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.6232E-07   1.9738E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.6232E-07   1.9738E-02
+          6  Fluid done  6.0000E-03  6.7842E-02
+       6  6.00000000000E-03  7.27329516249E-02  5.01425561577E-02  2.25903954672E-02      1dragx
+       6  6.00000000000E-03  7.28229157258E-01  7.26067866191E-01  2.16129106708E-03      1dragy
+       6  6.00000000000E-03  8.08616914091E-02  8.23579727825E-02 -1.49628137343E-03      1torqz
+Step      7, t= 7.0000000E-03, DT= 1.0000000E-03, C=  2.078 7.5024E-01 1.0159E-01
+             Solving for fluid
+          7  Project PRES           1.0690E-02   5.1160E-02   4.7855E+00   2   8
+          7  PRES gmres        19   8.2024E-09   1.6178E-03   1.0000E-08   2.5689E-02   4.4020E-02    F
+          7  Hmholtz VELX       7   9.4418E-09   6.5719E-01   1.0000E-08
+          7  Hmholtz VELY       8   3.1985E-09   1.0783E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.4010E-07   1.9548E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.4010E-07   1.9548E-02
+          7  Fluid done  7.0000E-03  6.2887E-02
+       7  7.00000000000E-03  7.29267105918E-02  5.03626264570E-02  2.25640841348E-02      1dragx
+       7  7.00000000000E-03  7.29605358734E-01  7.27439523225E-01  2.16583550913E-03      1dragy
+       7  7.00000000000E-03  8.15479184705E-02  8.30418877950E-02 -1.49396932450E-03      1torqz
+Step      8, t= 8.0000000E-03, DT= 1.0000000E-03, C=  2.078 8.5168E-01 1.0144E-01
+             Solving for fluid
+          8  Project PRES           6.2861E-03   5.1746E-02   8.2318E+00   3   8
+          8  PRES gmres        18   8.9993E-09   9.5126E-04   1.0000E-08   2.4218E-02   4.1134E-02    F
+          8  Hmholtz VELX       8   1.7292E-09   6.5734E-01   1.0000E-08
+          8  Hmholtz VELY       8   3.0757E-09   1.0787E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.1811E-07   1.9384E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.1811E-07   1.9384E-02
+          8  Fluid done  8.0000E-03  5.9672E-02
+       8  8.00000000000E-03  7.31204043051E-02  5.05823701393E-02  2.25380341658E-02      1dragx
+       8  8.00000000000E-03  7.30980246327E-01  7.28809423931E-01  2.17082239594E-03      1dragy
+       8  8.00000000000E-03  8.22359984490E-02  8.37274473937E-02 -1.49144894462E-03      1torqz
+Step      9, t= 9.0000000E-03, DT= 1.0000000E-03, C=  2.078 9.4512E-01 9.3442E-02
+             Solving for fluid
+          9  Project PRES           5.3182E-03   5.1866E-02   9.7527E+00   4   8
+          9  PRES gmres        18   8.4345E-09   8.0479E-04   1.0000E-08   2.4365E-02   4.1359E-02    F
+          9  Hmholtz VELX       8   1.7761E-09   6.5749E-01   1.0000E-08
+          9  Hmholtz VELY       8   2.9677E-09   1.0790E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.9651E-07   1.9283E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.9651E-07   1.9283E-02
+          9  Fluid done  9.0000E-03  6.0466E-02
+       9  9.00000000000E-03  7.33119981138E-02  5.07998030551E-02  2.25121950586E-02      1dragx
+       9  9.00000000000E-03  7.32334465511E-01  7.30158409847E-01  2.17605566400E-03      1dragy
+       9  9.00000000000E-03  8.29154124177E-02  8.44041868231E-02 -1.48877440539E-03      1torqz
+Step     10, t= 1.0000000E-02, DT= 1.0000000E-03, C=  2.078 1.0391E+00 9.3948E-02
+             Solving for fluid
+         10  Project PRES           3.5118E-03   5.1345E-02   1.4621E+01   5   8
+         10  PRES gmres        17   7.1211E-09   5.3143E-04   1.0000E-08   2.3008E-02   3.8502E-02    F
+         10  Hmholtz VELX       8   1.7578E-09   6.5765E-01   1.0000E-08
+         10  Hmholtz VELY       8   2.9401E-09   1.0793E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.7543E-07   1.9247E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.7543E-07   1.9247E-02
+         10  Fluid done  1.0000E-02  5.7709E-02
+      10  1.00000000000E-02  7.34990754519E-02  5.10126150709E-02  2.24864603810E-02      1dragx
+      10  1.00000000000E-02  7.33653247181E-01  7.31471798857E-01  2.18144832443E-03      1dragy
+      10  1.00000000000E-02  8.35797987341E-02  8.50658144669E-02 -1.48601573281E-03      1torqz
+Step     11, t= 1.1000000E-02, DT= 1.0000000E-03, C=  2.078 1.1303E+00 9.1260E-02
+             Solving for fluid
+         11  Project PRES           2.3279E-03   5.0370E-02   2.1638E+01   6   8
+         11  PRES gmres        16   8.0060E-09   3.5227E-04   1.0000E-08   2.1735E-02   3.6074E-02    F
+         11  Hmholtz VELX       8   1.7310E-09   6.5782E-01   1.0000E-08
+         11  Hmholtz VELY       8   2.8982E-09   1.0797E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.5496E-07   1.9250E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.5496E-07   1.9250E-02
+         11  Fluid done  1.1000E-02  5.4673E-02
+      11  1.10000000000E-02  7.36800493787E-02  5.12192581627E-02  2.24607912160E-02      1dragx
+      11  1.10000000000E-02  7.34936922110E-01  7.32750035857E-01  2.18688625269E-03      1dragy
+      11  1.10000000000E-02  8.42258128883E-02  8.57090319330E-02 -1.48321904465E-03      1torqz
+Step     12, t= 1.2000000E-02, DT= 1.0000000E-03, C=  2.077 1.2185E+00 8.8217E-02
+             Solving for fluid
+         12  Project PRES           1.7772E-03   4.9487E-02   2.7845E+01   7   8
+         12  PRES gmres        15   9.0264E-09   2.6894E-04   1.0000E-08   2.0199E-02   3.3416E-02    F
+         12  Hmholtz VELX       8   1.7642E-09   6.5799E-01   1.0000E-08
+         12  Hmholtz VELY       8   2.8874E-09   1.0801E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.3515E-07   1.9261E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.3515E-07   1.9261E-02
+         12  Fluid done  1.2000E-02  5.2424E-02
+      12  1.20000000000E-02  7.38545367692E-02  5.14193316793E-02  2.24352050899E-02      1dragx
+      12  1.20000000000E-02  7.36184155909E-01  7.33991847405E-01  2.19230850414E-03      1dragy
+      12  1.20000000000E-02  8.48530510078E-02  8.63334713508E-02 -1.48042034301E-03      1torqz
+Step     13, t= 1.3000000E-02, DT= 1.0000000E-03, C=  2.077 1.3045E+00 8.6001E-02
+             Solving for fluid
+         13  Project PRES           1.3026E-03   4.9240E-02   3.7803E+01   8   8
+         13  PRES gmres        15   7.7199E-09   1.9711E-04   1.0000E-08   2.0365E-02   3.3417E-02    F
+         13  Hmholtz VELX       8   1.7556E-09   6.5816E-01   1.0000E-08
+         13  Hmholtz VELY       8   2.8866E-09   1.0805E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.1603E-07   1.9258E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.1603E-07   1.9258E-02
+         13  Fluid done  1.3000E-02  5.2582E-02
+      13  1.30000000000E-02  7.40226610725E-02  5.16129453266E-02  2.24097157459E-02      1dragx
+      13  1.30000000000E-02  7.37394011454E-01  7.35196322468E-01  2.19768898586E-03      1dragy
+      13  1.30000000000E-02  8.54609921284E-02  8.69386350850E-02 -1.47764295665E-03      1torqz
+Step     14, t= 1.4000000E-02, DT= 1.0000000E-03, C=  2.077 1.3911E+00 8.6532E-02
+             Solving for fluid
+         14  Project PRES           9.3769E-04   4.9725E-02   5.3029E+01   8   8
+         14  PRES gmres        14   8.0587E-09   1.4190E-04   1.0000E-08   1.8966E-02   3.0979E-02    F
+         14  Hmholtz VELX       8   1.7333E-09   6.5833E-01   1.0000E-08
+         14  Hmholtz VELY       8   2.8828E-09   1.0809E+00   1.0000E-08
+             L1/L2 DIV(V)          -9.7619E-08   1.9229E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -9.7619E-08   1.9229E-02
+         14  Fluid done  1.4000E-02  4.9984E-02
+      14  1.40000000000E-02  7.41841107578E-02  5.17997673750E-02  2.23843433828E-02      1dragx
+      14  1.40000000000E-02  7.38564775987E-01  7.36361753622E-01  2.20302236489E-03      1dragy
+      14  1.40000000000E-02  8.60485755366E-02  8.75234734086E-02 -1.47489787198E-03      1torqz
+Step     15, t= 1.5000000E-02, DT= 1.0000000E-03, C=  2.077 1.4746E+00 8.3490E-02
+             Solving for fluid
+         15  Project PRES           7.2434E-04   5.0617E-02   6.9880E+01   8   8
+         15  PRES gmres        14   7.0412E-09   1.0961E-04   1.0000E-08   1.9061E-02   3.0904E-02    F
+         15  Hmholtz VELX       8   1.7048E-09   6.5852E-01   1.0000E-08
+         15  Hmholtz VELY       8   2.8818E-09   1.0813E+00   1.0000E-08
+             L1/L2 DIV(V)          -7.9931E-08   1.9170E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -7.9931E-08   1.9170E-02
+         15  Fluid done  1.5000E-02  4.9949E-02
+      15  1.50000000000E-02  7.43386811925E-02  5.19795558476E-02  2.23591253449E-02      1dragx
+      15  1.50000000000E-02  7.39695603213E-01  7.37487302557E-01  2.20830065593E-03      1dragy
+      15  1.50000000000E-02  8.66154295695E-02  8.80876163822E-02 -1.47218681277E-03      1torqz
+Step     16, t= 1.6000000E-02, DT= 1.0000000E-03, C=  2.077 1.5593E+00 8.4754E-02
+             Solving for fluid
+         16  Project PRES           5.9581E-04   5.1491E-02   8.6422E+01   8   8
+         16  PRES gmres        13   8.9451E-09   9.0162E-05   1.0000E-08   1.7626E-02   2.8505E-02    F
+         16  Hmholtz VELX       7   9.9172E-09   6.5870E-01   1.0000E-08
+         16  Hmholtz VELY       8   2.8771E-09   1.0818E+00   1.0000E-08
+             L1/L2 DIV(V)          -6.2966E-08   1.9088E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -6.2966E-08   1.9088E-02
+         16  Fluid done  1.6000E-02  4.7341E-02
+      16  1.60000000000E-02  7.44868873390E-02  5.21527943404E-02  2.23340929985E-02      1dragx
+      16  1.60000000000E-02  7.40790011417E-01  7.38576492616E-01  2.21351880086E-03      1dragy
+      16  1.60000000000E-02  8.71633803251E-02  8.86328933626E-02 -1.46951303742E-03      1torqz
+Step     17, t= 1.7000000E-02, DT= 1.0000000E-03, C=  2.077 1.6405E+00 8.1141E-02
+             Solving for fluid
+         17  Project PRES           4.4995E-04   5.2042E-02   1.1566E+02   8   8
+         17  PRES gmres        13   7.9953E-09   6.8090E-05   1.0000E-08   1.7708E-02   2.8581E-02    F
+         17  Hmholtz VELX       7   9.8328E-09   6.5888E-01   1.0000E-08
+         17  Hmholtz VELY       8   2.8670E-09   1.0822E+00   1.0000E-08
+             L1/L2 DIV(V)          -4.6722E-08   1.8992E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -4.6722E-08   1.8992E-02
+         17  Fluid done  1.7000E-02  4.7860E-02
+      17  1.70000000000E-02  7.46300558589E-02  5.23208007116E-02  2.23092551472E-02      1dragx
+      17  1.70000000000E-02  7.41857816440E-01  7.39639145508E-01  2.21867093221E-03      1dragy
+      17  1.70000000000E-02  8.76968979242E-02  8.91637812456E-02 -1.46688332141E-03      1torqz
+Step     18, t= 1.8000000E-02, DT= 1.0000000E-03, C=  2.077 1.7221E+00 8.1687E-02
+             Solving for fluid
+         18  Project PRES           3.7463E-04   5.2162E-02   1.3924E+02   8   8
+         18  PRES gmres        12   7.3359E-09   5.6691E-05   1.0000E-08   1.7218E-02   2.7995E-02    F
+         18  Hmholtz VELX       7   9.7682E-09   6.5907E-01   1.0000E-08
+         18  Hmholtz VELY       8   2.8529E-09   1.0827E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.1192E-08   1.8890E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.1192E-08   1.8890E-02
+         18  Fluid done  1.8000E-02  4.7191E-02
+      18  1.80000000000E-02  7.47699698798E-02  5.24853694206E-02  2.22846004592E-02      1dragx
+      18  1.80000000000E-02  7.42911994705E-01  7.40688242429E-01  2.22375227599E-03      1dragy
+      18  1.80000000000E-02  8.82219019686E-02  8.96862054499E-02 -1.46430348134E-03      1torqz
+Step     19, t= 1.9000000E-02, DT= 1.0000000E-03, C=  2.077 1.8031E+00 8.0905E-02
+             Solving for fluid
+         19  Project PRES           3.1188E-04   5.1962E-02   1.6661E+02   8   8
+         19  PRES gmres        12   9.3543E-09   4.7196E-05   1.0000E-08   1.7030E-02   2.6876E-02    F
+         19  Hmholtz VELX       7   9.7274E-09   6.5926E-01   1.0000E-08
+         19  Hmholtz VELY       8   2.8398E-09   1.0831E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.6369E-08   1.8786E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.6369E-08   1.8786E-02
+         19  Fluid done  1.9000E-02  4.5560E-02
+      19  1.90000000000E-02  7.49083438491E-02  5.26482373702E-02  2.22601064788E-02      1dragx
+      19  1.90000000000E-02  7.43963748236E-01  7.41734982050E-01  2.22876618655E-03      1dragy
+      19  1.90000000000E-02  8.87437433596E-02  9.02055165136E-02 -1.46177315403E-03      1torqz
+Step     20, t= 2.0000000E-02, DT= 1.0000000E-03, C=  2.076 1.8822E+00 7.9172E-02
+             Solving for fluid
+         20  Project PRES           2.5660E-04   5.1695E-02   2.0146E+02   8   8
+         20  PRES gmres        11   9.9209E-09   3.8831E-05   1.0000E-08   1.4885E-02   2.3622E-02    F
+         20  Hmholtz VELX       7   9.7058E-09   6.5944E-01   1.0000E-08
+         20  Hmholtz VELY       8   2.8284E-09   1.0836E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.2459E-09   1.8678E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.2459E-09   1.8678E-02
+         20  Fluid done  2.0000E-02  4.2243E-02
+      20  2.00000000000E-02  7.50463806348E-02  5.28106320847E-02  2.22357485502E-02      1dragx
+      20  2.00000000000E-02  7.45019388404E-01  7.42785660641E-01  2.23372776293E-03      1dragy
+      20  2.00000000000E-02  8.92657985056E-02  9.07250817168E-02 -1.45928321124E-03      1torqz
+Step     21, t= 2.1000000E-02, DT= 1.0000000E-03, C=  2.076 1.9581E+00 7.5846E-02
+             Solving for fluid
+         21  Project PRES           2.0096E-04   5.1604E-02   2.5679E+02   8   8
+         21  PRES gmres        11   9.3523E-09   3.0410E-05   1.0000E-08   1.4856E-02   2.3609E-02    F
+         21  Hmholtz VELX       7   9.6893E-09   6.5963E-01   1.0000E-08
+         21  Hmholtz VELY       8   2.8180E-09   1.0841E+00   1.0000E-08
+             L1/L2 DIV(V)           1.1188E-08   1.8564E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.1188E-08   1.8564E-02
+         21  Fluid done  2.1000E-02  4.2178E-02
+      21  2.10000000000E-02  7.51846398415E-02  5.29731331002E-02  2.22115067413E-02      1dragx
+      21  2.10000000000E-02  7.46080627008E-01  7.43841965528E-01  2.23866148007E-03      1dragy
+      21  2.10000000000E-02  8.97893734199E-02  9.12461901220E-02 -1.45681670217E-03      1torqz
+Step     22, t= 2.2000000E-02, DT= 1.0000000E-03, C=  2.076 2.0339E+00 7.5838E-02
+             Solving for fluid
+         22  Project PRES           1.6913E-04   5.1797E-02   3.0625E+02   8   8
+         22  PRES gmres        13   6.7375E-09   2.5594E-05   1.0000E-08   1.7716E-02   2.8766E-02    F
+         22  Hmholtz VELX       7   9.6657E-09   6.5982E-01   1.0000E-08
+         22  Hmholtz VELY       8   2.8078E-09   1.0846E+00   1.0000E-08
+             L1/L2 DIV(V)           2.3943E-08   1.8438E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       2.3943E-08   1.8438E-02
+         22  Fluid done  2.2000E-02  4.7354E-02
+      22  2.20000000000E-02  7.53231536954E-02  5.31357858253E-02  2.21873678700E-02      1dragx
+      22  2.20000000000E-02  7.47146662768E-01  7.44903067582E-01  2.24359518592E-03      1dragy
+      22  2.20000000000E-02  9.03144255807E-02  9.17687785013E-02 -1.45435292065E-03      1torqz
+Step     23, t= 2.3000000E-02, DT= 1.0000000E-03, C=  2.076 2.1149E+00 8.0956E-02
+             Solving for fluid
+         23  Project PRES           1.4012E-04   5.2223E-02   3.7270E+02   8   8
+         23  PRES gmres        13   6.7317E-09   2.1204E-05   1.0000E-08   1.7498E-02   2.8386E-02    F
+         23  Hmholtz VELX       7   9.6328E-09   6.6000E-01   1.0000E-08
+         23  Hmholtz VELY       8   2.7971E-09   1.0851E+00   1.0000E-08
+             L1/L2 DIV(V)           3.6027E-08   1.8299E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       3.6027E-08   1.8299E-02
+         23  Fluid done  2.3000E-02  4.6976E-02
+      23  2.30000000000E-02  7.54616073050E-02  5.32982850813E-02  2.21633222237E-02      1dragx
+      23  2.30000000000E-02  7.48216032657E-01  7.45967479446E-01  2.24855321126E-03      1dragy
+      23  2.30000000000E-02  9.08402729567E-02  9.22921461942E-02 -1.45187323753E-03      1torqz
+Step     24, t= 2.4000000E-02, DT= 1.0000000E-03, C=  2.076 2.1954E+00 8.0546E-02
+             Solving for fluid
+         24  Project PRES           1.1975E-04   5.2747E-02   4.4047E+02   8   8
+         24  PRES gmres        13   7.0996E-09   1.8122E-05   1.0000E-08   1.7614E-02   2.8442E-02    F
+         24  Hmholtz VELX       7   9.5931E-09   6.6019E-01   1.0000E-08
+         24  Hmholtz VELY       8   2.7859E-09   1.0857E+00   1.0000E-08
+             L1/L2 DIV(V)           4.7450E-08   1.8149E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       4.7450E-08   1.8149E-02
+         24  Fluid done  2.4000E-02  4.7042E-02
+      24  2.40000000000E-02  7.55995009933E-02  5.34601418893E-02  2.21393591040E-02      1dragx
+      24  2.40000000000E-02  7.49287244821E-01  7.47033694079E-01  2.25355074240E-03      1dragy
+      24  2.40000000000E-02  9.13659352148E-02  9.28153011833E-02 -1.44936596848E-03      1torqz
+Step     25, t= 2.5000000E-02, DT= 1.0000000E-03, C=  2.076 2.2762E+00 8.0807E-02
+             Solving for fluid
+         25  Project PRES           9.8038E-05   5.3231E-02   5.4297E+02   8   8
+         25  PRES gmres        13   9.3325E-09   1.4836E-05   1.0000E-08   1.7594E-02   2.8491E-02    F
+         25  Hmholtz VELX       7   9.5506E-09   6.6037E-01   1.0000E-08
+         25  Hmholtz VELY       8   2.7745E-09   1.0862E+00   1.0000E-08
+             L1/L2 DIV(V)           5.8221E-08   1.7991E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       5.8221E-08   1.7991E-02
+         25  Fluid done  2.5000E-02  4.7129E-02
+      25  2.50000000000E-02  7.57363035756E-02  5.36208389203E-02  2.21154646552E-02      1dragx
+      25  2.50000000000E-02  7.50358621737E-01  7.48100029452E-01  2.25859228505E-03      1dragy
+      25  2.50000000000E-02  9.18902701552E-02  9.33370979940E-02 -1.44682783882E-03      1torqz
+Step     26, t= 2.6000000E-02, DT= 1.0000000E-03, C=  2.076 2.3570E+00 8.0768E-02
+             Solving for fluid
+         26  Project PRES           7.9421E-05   5.3588E-02   6.7473E+02   8   8
+         26  PRES gmres        14   8.4628E-09   1.2019E-05   1.0000E-08   1.8955E-02   3.0961E-02    F
+         26  Hmholtz VELX       7   9.5073E-09   6.6056E-01   1.0000E-08
+         26  Hmholtz VELY       8   2.7637E-09   1.0867E+00   1.0000E-08
+             L1/L2 DIV(V)           6.8349E-08   1.7829E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       6.8349E-08   1.7829E-02
+         26  Fluid done  2.6000E-02  4.9564E-02
+      26  2.60000000000E-02  7.58715866778E-02  5.37799645408E-02  2.20916221370E-02      1dragx
+      26  2.60000000000E-02  7.51428226701E-01  7.49164551742E-01  2.26367495928E-03      1dragy
+      26  2.60000000000E-02  9.24121488910E-02  9.38564102690E-02 -1.44426137793E-03      1torqz
+Step     27, t= 2.7000000E-02, DT= 1.0000000E-03, C=  2.076 2.4403E+00 8.3358E-02
+             Solving for fluid
+         27  Project PRES           6.7967E-05   5.3796E-02   7.9150E+02   8   8
+         27  PRES gmres        14   9.7510E-09   1.0285E-05   1.0000E-08   1.9078E-02   3.1032E-02    F
+         27  Hmholtz VELX       7   9.4647E-09   6.6074E-01   1.0000E-08
+         27  Hmholtz VELY       8   2.7535E-09   1.0873E+00   1.0000E-08
+             L1/L2 DIV(V)           7.7842E-08   1.7666E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       7.7842E-08   1.7666E-02
+         27  Fluid done  2.7000E-02  5.0246E-02
+      27  2.70000000000E-02  7.60051055755E-02  5.39372930622E-02  2.20678125133E-02      1dragx
+      27  2.70000000000E-02  7.52494245666E-01  7.50225450872E-01  2.26879479354E-03      1dragy
+      27  2.70000000000E-02  9.29307073389E-02  9.43723776292E-02 -1.44167029029E-03      1torqz
+Step     28, t= 2.8000000E-02, DT= 1.0000000E-03, C=  2.075 2.5242E+00 8.3870E-02
+             Solving for fluid
+         28  Project PRES           5.5789E-05   5.3890E-02   9.6597E+02   8   8
+         28  PRES gmres        14   9.3942E-09   8.4423E-06   1.0000E-08   1.9073E-02   3.1012E-02    F
+         28  Hmholtz VELX       7   9.4241E-09   6.6092E-01   1.0000E-08
+         28  Hmholtz VELY       8   2.7439E-09   1.0878E+00   1.0000E-08
+             L1/L2 DIV(V)           8.6709E-08   1.7506E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       8.6709E-08   1.7506E-02
+         28  Fluid done  2.8000E-02  4.9598E-02
+      28  2.80000000000E-02  7.61367987509E-02  5.40927844268E-02  2.20440143241E-02      1dragx
+      28  2.80000000000E-02  7.53555518016E-01  7.51281566459E-01  2.27395155693E-03      1dragy
+      28  2.80000000000E-02  9.34455151585E-02  9.48845709825E-02 -1.43905582398E-03      1torqz
+Step     29, t= 2.9000000E-02, DT= 1.0000000E-03, C=  2.075 2.6074E+00 8.3162E-02
+             Solving for fluid
+         29  Project PRES           4.7372E-05   5.3925E-02   1.1383E+03   8   8
+         29  PRES gmres        14   9.1393E-09   7.1686E-06   1.0000E-08   1.8986E-02   3.1108E-02    F
+         29  Hmholtz VELX       7   9.3868E-09   6.6110E-01   1.0000E-08
+         29  Hmholtz VELY       8   2.7345E-09   1.0884E+00   1.0000E-08
+             L1/L2 DIV(V)           9.4954E-08   1.7352E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       9.4954E-08   1.7352E-02
+         29  Fluid done  2.9000E-02  4.9854E-02
+      29  2.90000000000E-02  7.62666995929E-02  5.42464957897E-02  2.20202038032E-02      1dragx
+      29  2.90000000000E-02  7.54611624607E-01  7.52332475146E-01  2.27914946099E-03      1dragy
+      29  2.90000000000E-02  9.39564950127E-02  9.53929111634E-02 -1.43641615074E-03      1torqz
+Step     30, t= 3.0000000E-02, DT= 1.0000000E-03, C=  2.075 2.6912E+00 8.3809E-02
+             Solving for fluid
+         30  Project PRES           4.2644E-05   5.3941E-02   1.2649E+03   8   8
+         30  PRES gmres        15   7.8782E-09   6.4532E-06   1.0000E-08   2.0312E-02   3.3651E-02    F
+         30  Hmholtz VELX       7   9.3531E-09   6.6128E-01   1.0000E-08
+         30  Hmholtz VELY       8   2.7251E-09   1.0889E+00   1.0000E-08
+             L1/L2 DIV(V)           1.0259E-07   1.7204E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.0259E-07   1.7204E-02
+         30  Fluid done  3.0000E-02  5.2835E-02
+      30  3.00000000000E-02  7.63948128902E-02  5.43984566693E-02  2.19963562210E-02      1dragx
+      30  3.00000000000E-02  7.55662388653E-01  7.53377994334E-01  2.28439431853E-03      1dragy
+      30  3.00000000000E-02  9.44636188542E-02  9.58973673529E-02 -1.43374849873E-03      1torqz
+Step     31, t= 3.1000000E-02, DT= 1.0000000E-03, C=  2.075 2.7778E+00 8.6628E-02
+             Solving for fluid
+         31  Project PRES           4.2336E-05   5.3953E-02   1.2744E+03   8   8
+         31  PRES gmres        16   7.1584E-09   6.4066E-06   1.0000E-08   2.2640E-02   3.6871E-02    F
+         31  Hmholtz VELX       7   9.3223E-09   6.6145E-01   1.0000E-08
+         31  Hmholtz VELY       8   2.7153E-09   1.0895E+00   1.0000E-08
+             L1/L2 DIV(V)           1.0961E-07   1.7067E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.0961E-07   1.7067E-02
+         31  Fluid done  3.1000E-02  5.5784E-02
+      31  3.10000000000E-02  7.65210217764E-02  5.45485721142E-02  2.19724496622E-02      1dragx
+      31  3.10000000000E-02  7.56707227774E-01  7.54417538469E-01  2.28968930553E-03      1dragy
+      31  3.10000000000E-02  9.49666122656E-02  9.63976641951E-02 -1.43105192948E-03      1torqz
+Step     32, t= 3.2000000E-02, DT= 1.0000000E-03, C=  2.075 2.8690E+00 9.1187E-02
+             Solving for fluid
+         32  Project PRES           4.0267E-05   5.3963E-02   1.3401E+03   8   8
+         32  PRES gmres        16   7.1303E-09   6.0935E-06   1.0000E-08   2.1656E-02   3.6042E-02    F
+         32  Hmholtz VELX       7   9.2940E-09   6.6163E-01   1.0000E-08
+         32  Hmholtz VELY       8   2.7051E-09   1.0900E+00   1.0000E-08
+             L1/L2 DIV(V)           1.1604E-07   1.6941E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.1604E-07   1.6941E-02
+         32  Fluid done  3.2000E-02  5.4801E-02
+      32  3.20000000000E-02  7.66451170482E-02  5.46966473788E-02  2.19484696694E-02      1dragx
+      32  3.20000000000E-02  7.57744960129E-01  7.55449927596E-01  2.29503253218E-03      1dragy
+      32  3.20000000000E-02  9.54649264729E-02  9.68932553475E-02 -1.42832887463E-03      1torqz
+Step     33, t= 3.3000000E-02, DT= 1.0000000E-03, C=  2.075 2.9574E+00 8.8447E-02
+             Solving for fluid
+         33  Project PRES           4.0877E-05   5.3971E-02   1.3203E+03   8   8
+         33  PRES gmres        15   8.9914E-09   6.1858E-06   1.0000E-08   2.0425E-02   3.3818E-02    F
+         33  Hmholtz VELX       7   9.2690E-09   6.6180E-01   1.0000E-08
+         33  Hmholtz VELY       8   2.6944E-09   1.0906E+00   1.0000E-08
+             L1/L2 DIV(V)           1.2187E-07   1.6825E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.2187E-07   1.6825E-02
+         33  Fluid done  3.3000E-02  5.2795E-02
+      33  3.30000000000E-02  7.67669174606E-02  5.48425046280E-02  2.19244128327E-02      1dragx
+      33  3.30000000000E-02  7.58774310123E-01  7.56473892916E-01  2.30041720607E-03      1dragy
+      33  3.30000000000E-02  9.59580121347E-02  9.73835968692E-02 -1.42558473446E-03      1torqz
+Step     34, t= 3.4000000E-02, DT= 1.0000000E-03, C=  2.075 3.0438E+00 8.6334E-02
+             Solving for fluid
+         34  Project PRES           4.0041E-05   5.3966E-02   1.3478E+03   8   8
+         34  PRES gmres        15   6.9643E-09   6.0593E-06   1.0000E-08   2.0545E-02   3.3514E-02    F
+         34  Hmholtz VELX       7   9.2486E-09   6.6197E-01   1.0000E-08
+         34  Hmholtz VELY       8   2.6834E-09   1.0912E+00   1.0000E-08
+             L1/L2 DIV(V)           1.2711E-07   1.6719E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.2711E-07   1.6719E-02
+         34  Fluid done  3.4000E-02  5.2162E-02
+      34  3.40000000000E-02  7.68864028358E-02  5.49861154820E-02  2.19002873538E-02      1dragx
+      34  3.40000000000E-02  7.59794721307E-01  7.57488887628E-01  2.30583367868E-03      1dragy
+      34  3.40000000000E-02  9.64456893187E-02  9.78685155721E-02 -1.42282625345E-03      1torqz
+Step     35, t= 3.5000000E-02, DT= 1.0000000E-03, C=  2.075 3.1295E+00 8.5741E-02
+             Solving for fluid
+         35  Project PRES           3.7406E-05   5.3923E-02   1.4416E+03   8   8
+         35  PRES gmres        15   9.2138E-09   5.6606E-06   1.0000E-08   2.0900E-02   3.3978E-02    F
+         35  Hmholtz VELX       7   9.2338E-09   6.6214E-01   1.0000E-08
+         35  Hmholtz VELY       8   2.6724E-09   1.0918E+00   1.0000E-08
+             L1/L2 DIV(V)           1.3176E-07   1.6618E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.3176E-07   1.6618E-02
+         35  Fluid done  3.5000E-02  5.2617E-02
+      35  3.50000000000E-02  7.70037659995E-02  5.51276560257E-02  2.18761099739E-02      1dragx
+      35  3.50000000000E-02  7.60806893565E-01  7.58495621430E-01  2.31127213424E-03      1dragy
+      35  3.50000000000E-02  9.69283517971E-02  9.83484115802E-02 -1.42005978310E-03      1torqz
+Step     36, t= 3.6000000E-02, DT= 1.0000000E-03, C=  2.075 3.2158E+00 8.6295E-02
+             Solving for fluid
+         36  Project PRES           3.9217E-05   5.3840E-02   1.3729E+03   8   8
+         36  PRES gmres        16   6.7590E-09   5.9346E-06   1.0000E-08   2.1684E-02   3.6146E-02    F
+         36  Hmholtz VELX       7   9.2234E-09   6.6230E-01   1.0000E-08
+         36  Hmholtz VELY       8   2.6617E-09   1.0923E+00   1.0000E-08
+             L1/L2 DIV(V)           1.3584E-07   1.6520E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.3584E-07   1.6520E-02
+         36  Fluid done  3.6000E-02  5.4757E-02
+      36  3.60000000000E-02  7.71193662461E-02  5.52674657427E-02  2.18519005034E-02      1dragx
+      36  3.60000000000E-02  7.61812782572E-01  7.59496057994E-01  2.31672457714E-03      1dragy
+      36  3.60000000000E-02  9.74069192281E-02  9.88242092797E-02 -1.41729005154E-03      1torqz
+Step     37, t= 3.7000000E-02, DT= 1.0000000E-03, C=  2.074 3.3042E+00 8.8399E-02
+             Solving for fluid
+         37  Project PRES           3.9215E-05   5.3757E-02   1.3708E+03   8   8
+         37  PRES gmres        16   7.0847E-09   5.9344E-06   1.0000E-08   2.2186E-02   3.6525E-02    F
+         37  Hmholtz VELX       7   9.2155E-09   6.6246E-01   1.0000E-08
+         37  Hmholtz VELY       8   2.6512E-09   1.0929E+00   1.0000E-08
+             L1/L2 DIV(V)           1.3934E-07   1.6424E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.3934E-07   1.6424E-02
+         37  Fluid done  3.7000E-02  5.5208E-02
+      37  3.70000000000E-02  7.72336536291E-02  5.54059780857E-02  2.18276755434E-02      1dragx
+      37  3.70000000000E-02  7.62815229008E-01  7.60493042447E-01  2.32218656076E-03      1dragy
+      37  3.70000000000E-02  9.78826616187E-02  9.92971810484E-02 -1.41451942966E-03      1torqz
+Step     38, t= 3.8000000E-02, DT= 1.0000000E-03, C=  2.074 3.3934E+00 8.9163E-02
+             Solving for fluid
+         38  Project PRES           3.5460E-05   5.3760E-02   1.5160E+03   8   8
+         38  PRES gmres        16   6.7636E-09   5.3662E-06   1.0000E-08   2.1679E-02   3.6043E-02    F
+         38  Hmholtz VELX       7   9.2076E-09   6.6262E-01   1.0000E-08
+         38  Hmholtz VELY       8   2.6406E-09   1.0935E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4227E-07   1.6328E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4227E-07   1.6328E-02
+         38  Fluid done  3.8000E-02  5.5803E-02
+      38  3.80000000000E-02  7.73471169441E-02  5.55436736017E-02  2.18034433424E-02      1dragx
+      38  3.80000000000E-02  7.63817625577E-01  7.61489967154E-01  2.32765842293E-03      1dragy
+      38  3.80000000000E-02  9.83570636670E-02  9.97688109483E-02 -1.41174728126E-03      1torqz
+Step     39, t= 3.9000000E-02, DT= 1.0000000E-03, C=  2.074 3.4828E+00 8.9422E-02
+             Solving for fluid
+         39  Project PRES           3.8422E-05   5.3927E-02   1.4035E+03   8   8
+         39  PRES gmres        15   8.8262E-09   5.8143E-06   1.0000E-08   2.0375E-02   3.3616E-02    F
+         39  Hmholtz VELX       7   9.1981E-09   6.6277E-01   1.0000E-08
+         39  Hmholtz VELY       8   2.6298E-09   1.0941E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4463E-07   1.6235E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4463E-07   1.6235E-02
+         39  Fluid done  3.9000E-02  5.2222E-02
+      39  3.90000000000E-02  7.74602770287E-02  5.56810762763E-02  2.17792007524E-02      1dragx
+      39  3.90000000000E-02  7.64823732205E-01  7.62490585921E-01  2.33314628461E-03      1dragy
+      39  3.90000000000E-02  9.88317782758E-02  1.00240747739E-01 -1.40896946288E-03      1torqz
+Step     40, t= 4.0000000E-02, DT= 1.0000000E-03, C=  2.074 3.5687E+00 8.5902E-02
+             Solving for fluid
+         40  Project PRES           3.8080E-05   5.4290E-02   1.4257E+03   8   8
+         40  PRES gmres        15   9.8642E-09   5.7625E-06   1.0000E-08   2.0389E-02   3.3776E-02    F
+         40  Hmholtz VELX       7   9.1852E-09   6.6291E-01   1.0000E-08
+         40  Hmholtz VELY       8   2.6186E-09   1.0947E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4643E-07   1.6145E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4643E-07   1.6145E-02
+         40  Fluid done  4.0000E-02  5.2410E-02
+      40  4.00000000000E-02  7.75736764570E-02  5.58187438372E-02  2.17549326199E-02      1dragx
+      40  4.00000000000E-02  7.65837504023E-01  7.63498841905E-01  2.33866211838E-03      1dragy
+      40  4.00000000000E-02  9.93085677140E-02  1.00714746030E-01 -1.40617831631E-03      1torqz
+Step     41, t= 4.1000000E-02, DT= 1.0000000E-03, C=  2.074 3.6547E+00 8.5991E-02
+             Solving for fluid
+         41  Project PRES           3.2687E-05   5.4827E-02   1.6774E+03   8   8
+         41  PRES gmres        16   6.4752E-09   4.9464E-06   1.0000E-08   2.1739E-02   3.6087E-02    F
+         41  Hmholtz VELX       7   9.1674E-09   6.6305E-01   1.0000E-08
+         41  Hmholtz VELY       8   2.6070E-09   1.0952E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4767E-07   1.6060E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4767E-07   1.6060E-02
+         41  Fluid done  4.1000E-02  5.4679E-02
+      41  4.10000000000E-02  7.76878235648E-02  5.59572099318E-02  2.17306136329E-02      1dragx
+      41  4.10000000000E-02  7.66862689128E-01  7.64518466882E-01  2.34422224606E-03      1dragy
+      41  4.10000000000E-02  9.97891230112E-02  1.01192486628E-01 -1.40336361722E-03      1torqz
+Step     42, t= 4.2000000E-02, DT= 1.0000000E-03, C=  2.074 3.7433E+00 8.8627E-02
+             Solving for fluid
+         42  Project PRES           3.8839E-05   5.5481E-02   1.4285E+03   8   8
+         42  PRES gmres        15   9.7240E-09   5.8774E-06   1.0000E-08   2.2089E-02   3.5808E-02    F
+         42  Hmholtz VELX       7   9.1433E-09   6.6319E-01   1.0000E-08
+         42  Hmholtz VELY       8   2.5953E-09   1.0958E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4836E-07   1.5979E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4836E-07   1.5979E-02
+         42  Fluid done  4.2000E-02  5.4428E-02
+      42  4.20000000000E-02  7.78031003324E-02  5.60968882700E-02  2.17062120625E-02      1dragx
+      42  4.20000000000E-02  7.67902181025E-01  7.65552336637E-01  2.34984438755E-03      1dragy
+      42  4.20000000000E-02  1.00274765872E-01  1.01675280432E-01 -1.40051455979E-03      1torqz
+Step     43, t= 4.3000000E-02, DT= 1.0000000E-03, C=  2.074 3.8314E+00 8.8050E-02
+             Solving for fluid
+         43  Project PRES           3.9943E-05   5.6167E-02   1.4062E+03   8   8
+         43  PRES gmres        16   6.8588E-09   6.0445E-06   1.0000E-08   2.1849E-02   3.5984E-02    F
+         43  Hmholtz VELX       7   9.1129E-09   6.6332E-01   1.0000E-08
+         43  Hmholtz VELY       8   2.5837E-09   1.0964E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4850E-07   1.5904E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4850E-07   1.5904E-02
+         43  Fluid done  4.3000E-02  5.5124E-02
+      43  4.30000000000E-02  7.79196717252E-02  5.62379769634E-02  2.16816947618E-02      1dragx
+      43  4.30000000000E-02  7.68957408188E-01  7.66601864313E-01  2.35554387519E-03      1dragy
+      43  4.30000000000E-02  1.00766162592E-01  1.02163784754E-01 -1.39762216188E-03      1torqz
+Step     44, t= 4.4000000E-02, DT= 1.0000000E-03, C=  2.074 3.9201E+00 8.8745E-02
+             Solving for fluid
+         44  Project PRES           3.2807E-05   5.6804E-02   1.7314E+03   8   8
+         44  PRES gmres        15   7.7541E-09   4.9647E-06   1.0000E-08   2.0486E-02   3.3590E-02    F
+         44  Hmholtz VELX       7   9.0776E-09   6.6344E-01   1.0000E-08
+         44  Hmholtz VELY       8   2.5723E-09   1.0970E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4809E-07   1.5836E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4809E-07   1.5836E-02
+         44  Fluid done  4.4000E-02  5.2152E-02
+      44  4.40000000000E-02  7.80374600817E-02  5.63804278485E-02  2.16570322332E-02      1dragx
+      44  4.40000000000E-02  7.70028036839E-01  7.67666706324E-01  2.36133051501E-03      1dragy
+      44  4.40000000000E-02  1.01263199454E-01  1.02657880712E-01 -1.39468125841E-03      1torqz
+Step     45, t= 4.5000000E-02, DT= 1.0000000E-03, C=  2.074 4.0059E+00 8.5739E-02
+             Solving for fluid
+         45  Project PRES           4.0149E-05   5.7354E-02   1.4285E+03   8   8
+         45  PRES gmres        15   8.4341E-09   6.0757E-06   1.0000E-08   2.0395E-02   3.3417E-02    F
+         45  Hmholtz VELX       7   9.0398E-09   6.6357E-01   1.0000E-08
+         45  Hmholtz VELY       8   2.5610E-09   1.0976E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4714E-07   1.5776E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4714E-07   1.5776E-02
+         45  Fluid done  4.5000E-02  5.2315E-02
+      45  4.50000000000E-02  7.81561860507E-02  5.65239834451E-02  2.16322026057E-02      1dragx
+      45  4.50000000000E-02  7.71112132915E-01  7.68744925813E-01  2.36720710129E-03      1dragy
+      45  4.50000000000E-02  1.01765065121E-01  1.03156756471E-01 -1.39169135016E-03      1torqz
+Step     46, t= 4.6000000E-02, DT= 1.0000000E-03, C=  2.074 4.0918E+00 8.5919E-02
+             Solving for fluid
+         46  Project PRES           4.3404E-05   5.7826E-02   1.3323E+03   8   8
+         46  PRES gmres        16   7.3808E-09   6.5683E-06   1.0000E-08   2.1873E-02   3.6148E-02    F
+         46  Hmholtz VELX       7   9.0018E-09   6.6368E-01   1.0000E-08
+         46  Hmholtz VELY       8   2.5499E-09   1.0982E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4566E-07   1.5725E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4566E-07   1.5725E-02
+         46  Fluid done  4.6000E-02  5.4775E-02
+      46  4.60000000000E-02  7.82754490932E-02  5.66682553705E-02  2.16071937227E-02      1dragx
+      46  4.60000000000E-02  7.72206602173E-01  7.69833432347E-01  2.37316982511E-03      1dragy
+      46  4.60000000000E-02  1.02270458789E-01  1.03659114868E-01 -1.38865607880E-03      1torqz
+Step     47, t= 4.7000000E-02, DT= 1.0000000E-03, C=  2.073 4.1802E+00 8.8400E-02
+             Solving for fluid
+         47  Project PRES           3.8899E-05   5.8211E-02   1.4965E+03   8   8
+         47  PRES gmres        16   6.8863E-09   5.8865E-06   1.0000E-08   2.1795E-02   3.6094E-02    F
+         47  Hmholtz VELX       7   8.9642E-09   6.6379E-01   1.0000E-08
+         47  Hmholtz VELY       8   2.5390E-09   1.0988E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4365E-07   1.5682E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4365E-07   1.5682E-02
+         47  Fluid done  4.7000E-02  5.4731E-02
+      47  4.70000000000E-02  7.83948008057E-02  5.68127978108E-02  2.15820029949E-02      1dragx
+      47  4.70000000000E-02  7.73307643679E-01  7.70928433297E-01  2.37921038168E-03      1dragy
+      47  4.70000000000E-02  1.02777800157E-01  1.04163381921E-01 -1.38558176391E-03      1torqz
+Step     48, t= 4.8000000E-02, DT= 1.0000000E-03, C=  2.073 4.2686E+00 8.8438E-02
+             Solving for fluid
+         48  Project PRES           4.4201E-05   5.8473E-02   1.3229E+03   8   8
+         48  PRES gmres        15   9.2998E-09   6.6888E-06   1.0000E-08   2.0417E-02   3.3459E-02    F
+         48  Hmholtz VELX       7   8.9271E-09   6.6389E-01   1.0000E-08
+         48  Hmholtz VELY       8   2.5283E-09   1.0994E+00   1.0000E-08
+             L1/L2 DIV(V)           1.4112E-07   1.5640E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.4112E-07   1.5640E-02
+         48  Fluid done  4.8000E-02  5.2048E-02
+      48  4.80000000000E-02  7.85137828455E-02  5.69571473331E-02  2.15566355124E-02      1dragx
+      48  4.80000000000E-02  7.74411093143E-01  7.72025774614E-01  2.38531852927E-03      1dragy
+      48  4.80000000000E-02  1.03285374780E-01  1.04667850330E-01 -1.38247554989E-03      1torqz
+Step     49, t= 4.9000000E-02, DT= 1.0000000E-03, C=  2.073 4.3544E+00 8.5765E-02
+             Solving for fluid
+         49  Project PRES           4.0124E-05   5.8609E-02   1.4607E+03   8   8
+         49  PRES gmres        15   8.9981E-09   6.0718E-06   1.0000E-08   2.0350E-02   3.3289E-02    F
+         49  Hmholtz VELX       7   8.8903E-09   6.6398E-01   1.0000E-08
+         49  Hmholtz VELY       8   2.5177E-09   1.1000E+00   1.0000E-08
+             L1/L2 DIV(V)           1.3807E-07   1.5590E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.3807E-07   1.5590E-02
+         49  Fluid done  4.9000E-02  5.1866E-02
+      49  4.90000000000E-02  7.86319461703E-02  5.71008451011E-02  2.15311010691E-02      1dragx
+      49  4.90000000000E-02  7.75512731957E-01  7.73121247386E-01  2.39148457064E-03      1dragy
+      49  4.90000000000E-02  1.03791458766E-01  1.05170802564E-01 -1.37934379872E-03      1torqz
+Step     50, t= 5.0000000E-02, DT= 1.0000000E-03, C=  2.073 4.4399E+00 8.5494E-02
+             Solving for fluid
+         50  Project PRES           3.9243E-05   5.8662E-02   1.4948E+03   8   8
+         50  PRES gmres        15   8.6731E-09   5.9386E-06   1.0000E-08   2.0500E-02   3.3564E-02    F
+         50  Hmholtz VELX       7   8.8545E-09   6.6407E-01   1.0000E-08
+         50  Hmholtz VELY       8   2.5070E-09   1.1006E+00   1.0000E-08
+             L1/L2 DIV(V)           1.3451E-07   1.5525E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.3451E-07   1.5525E-02
+         50  Fluid done  5.0000E-02  5.2156E-02
+      50  5.00000000000E-02  7.87488821164E-02  5.72434712210E-02  2.15054108955E-02      1dragx
+      50  5.00000000000E-02  7.76608766489E-01  7.74211065397E-01  2.39770109255E-03      1dragy
+      50  5.00000000000E-02  1.04294506105E-01  1.05670697106E-01 -1.37619100066E-03      1torqz
+Step     51, t= 5.1000000E-02, DT= 1.0000000E-03, C=  2.073 4.5256E+00 8.5757E-02
+             Solving for fluid
+         51  Project PRES           4.0768E-05   5.8679E-02   1.4393E+03   8   8
+         51  PRES gmres        16   7.4377E-09   6.1693E-06   1.0000E-08   2.1774E-02   3.5922E-02    F
+         51  Hmholtz VELX       7   8.8208E-09   6.6414E-01   1.0000E-08
+         51  Hmholtz VELY       8   2.4957E-09   1.1012E+00   1.0000E-08
+             L1/L2 DIV(V)           1.3044E-07   1.5441E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.3044E-07   1.5441E-02
+         51  Fluid done  5.1000E-02  5.4556E-02
+      51  5.10000000000E-02  7.88642833435E-02  5.73847085938E-02  2.14795747497E-02      1dragx
+      51  5.10000000000E-02  7.77696530113E-01  7.75292566164E-01  2.40396394841E-03      1dragy
+      51  5.10000000000E-02  1.04793431013E-01  1.06166450277E-01 -1.37301926341E-03      1torqz
+Step     52, t= 5.2000000E-02, DT= 1.0000000E-03, C=  2.073 4.6138E+00 8.8169E-02
+             Solving for fluid
+         52  Project PRES           4.1859E-05   5.8690E-02   1.4021E+03   8   8
+         52  PRES gmres        16   8.5947E-09   6.3344E-06   1.0000E-08   2.2011E-02   3.6275E-02    F
+         52  Hmholtz VELX       7   8.7903E-09   6.6421E-01   1.0000E-08
+         52  Hmholtz VELY       8   2.4837E-09   1.1018E+00   1.0000E-08
+             L1/L2 DIV(V)           1.2588E-07   1.5343E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.2588E-07   1.5343E-02
+         52  Fluid done  5.2000E-02  5.4913E-02
+      52  5.20000000000E-02  7.89780296299E-02  5.75244308585E-02  2.14535987715E-02      1dragx
+      52  5.20000000000E-02  7.78775231476E-01  7.76364958956E-01  2.41027252032E-03      1dragy
+      52  5.20000000000E-02  1.05287917002E-01  1.06657745322E-01 -1.36982832060E-03      1torqz
+Step     53, t= 5.3000000E-02, DT= 1.0000000E-03, C=  2.073 4.7027E+00 8.8853E-02
+             Solving for fluid
+         53  Project PRES           4.1944E-05   5.8739E-02   1.4004E+03   8   8
+         53  PRES gmres        16   8.4612E-09   6.3473E-06   1.0000E-08   2.1601E-02   3.5774E-02    F
+         53  Hmholtz VELX       7   8.7634E-09   6.6426E-01   1.0000E-08
+         53  Hmholtz VELY       8   2.4713E-09   1.1024E+00   1.0000E-08
+             L1/L2 DIV(V)           1.2083E-07   1.5242E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.2083E-07   1.5242E-02
+         53  Fluid done  5.3000E-02  5.4388E-02
+      53  5.30000000000E-02  7.90902529040E-02  5.76627684375E-02  2.14274844665E-02      1dragx
+      53  5.30000000000E-02  7.79846399979E-01  7.77429770646E-01  2.41662933229E-03      1dragy
+      53  5.30000000000E-02  1.05778604849E-01  1.07145220795E-01 -1.36661594630E-03      1torqz
+Step     54, t= 5.4000000E-02, DT= 1.0000000E-03, C=  2.073 4.7906E+00 8.7988E-02
+             Solving for fluid
+         54  Project PRES           4.1711E-05   5.8883E-02   1.4117E+03   8   8
+         54  PRES gmres        16   7.2132E-09   6.3120E-06   1.0000E-08   2.1554E-02   3.5725E-02    F
+         54  Hmholtz VELX       7   8.7401E-09   6.6431E-01   1.0000E-08
+         54  Hmholtz VELY       8   2.4588E-09   1.1030E+00   1.0000E-08
+             L1/L2 DIV(V)           1.1531E-07   1.5153E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.1531E-07   1.5153E-02
+         54  Fluid done  5.4000E-02  5.4307E-02
+      54  5.40000000000E-02  7.92013467629E-02  5.78001178132E-02  2.14012289497E-02      1dragx
+      54  5.40000000000E-02  7.80913720035E-01  7.78490680896E-01  2.42303913955E-03      1dragy
+      54  5.40000000000E-02  1.06267033926E-01  1.07630412596E-01 -1.36337867067E-03      1torqz
+Step     55, t= 5.5000000E-02, DT= 1.0000000E-03, C=  2.073 4.8785E+00 8.7869E-02
+             Solving for fluid
+         55  Project PRES           4.4587E-05   5.9118E-02   1.3259E+03   8   8
+         55  PRES gmres        15   8.7310E-09   6.7472E-06   1.0000E-08   2.0229E-02   3.3153E-02    F
+         55  Hmholtz VELX       7   8.7199E-09   6.6435E-01   1.0000E-08
+         55  Hmholtz VELY       8   2.4468E-09   1.1037E+00   1.0000E-08
+             L1/L2 DIV(V)           1.0931E-07   1.5088E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.0931E-07   1.5088E-02
+         55  Fluid done  5.5000E-02  5.1748E-02
+      55  5.50000000000E-02  7.93119025194E-02  5.79370761493E-02  2.13748263701E-02      1dragx
+      55  5.50000000000E-02  7.81982223790E-01  7.79552716089E-01  2.42950770087E-03      1dragy
+      55  5.50000000000E-02  1.06755317779E-01  1.08115430419E-01 -1.36011263933E-03      1torqz
+Step     56, t= 5.6000000E-02, DT= 1.0000000E-03, C=  2.073 4.9640E+00 8.5482E-02
+             Solving for fluid
+         56  Project PRES           3.8335E-05   5.9328E-02   1.5476E+03   8   8
+         56  PRES gmres        16   7.4687E-09   5.8012E-06   1.0000E-08   2.1566E-02   3.6123E-02    F
+         56  Hmholtz VELX       7   8.7020E-09   6.6438E-01   1.0000E-08
+         56  Hmholtz VELY       8   2.4353E-09   1.1043E+00   1.0000E-08
+             L1/L2 DIV(V)           1.0285E-07   1.5055E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.0285E-07   1.5055E-02
+         56  Fluid done  5.6000E-02  5.6328E-02
+      56  5.60000000000E-02  7.94225935240E-02  5.80743233768E-02  2.13482701472E-02      1dragx
+      56  5.60000000000E-02  7.83057106109E-01  7.80621065613E-01  2.43604049610E-03      1dragy
+      56  5.60000000000E-02  1.07245660196E-01  1.08602474598E-01 -1.35681440225E-03      1torqz
+Step     57, t= 5.7000000E-02, DT= 1.0000000E-03, C=  2.072 5.0562E+00 9.2191E-02
+             Solving for fluid
+         57  Project PRES           4.4102E-05   5.9328E-02   1.3453E+03   8   8
+         57  PRES gmres        16   8.4443E-09   6.6738E-06   1.0000E-08   2.2560E-02   3.7375E-02    F
+         57  Hmholtz VELX       7   8.6851E-09   6.6440E-01   1.0000E-08
+         57  Hmholtz VELY       8   2.4240E-09   1.1050E+00   1.0000E-08
+             L1/L2 DIV(V)           9.5936E-08   1.5050E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       9.5936E-08   1.5050E-02
+         57  Fluid done  5.7000E-02  6.0726E-02
+      57  5.70000000000E-02  7.95340377536E-02  5.82124823975E-02  2.13215553561E-02      1dragx
+      57  5.70000000000E-02  7.84142565013E-01  7.81699923268E-01  2.44264174507E-03      1dragy
+      57  5.70000000000E-02  1.07739870004E-01  1.09093351452E-01 -1.35348144763E-03      1torqz
+Step     58, t= 5.8000000E-02, DT= 1.0000000E-03, C=  2.072 5.1518E+00 9.5637E-02
+             Solving for fluid
+         58  Project PRES           3.9309E-05   5.9000E-02   1.5009E+03   8   8
+         58  PRES gmres        16   8.4850E-09   5.9485E-06   1.0000E-08   2.1573E-02   3.6146E-02    F
+         58  Hmholtz VELX       7   8.6667E-09   6.6441E-01   1.0000E-08
+         58  Hmholtz VELY       8   2.4125E-09   1.1057E+00   1.0000E-08
+             L1/L2 DIV(V)           8.8586E-08   1.5065E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       8.8586E-08   1.5065E-02
+         58  Fluid done  5.8000E-02  5.5018E-02
+      58  5.80000000000E-02  7.96466700865E-02  5.83519895629E-02  2.12946805235E-02      1dragx
+      58  5.80000000000E-02  7.85241000988E-01  7.82791687044E-01  2.44931394374E-03      1dragy
+      58  5.80000000000E-02  1.08239007938E-01  1.09589120291E-01 -1.35011235260E-03      1torqz
+Step     59, t= 5.9000000E-02, DT= 1.0000000E-03, C=  2.072 5.2408E+00 8.8978E-02
+             Solving for fluid
+         59  Project PRES           3.8956E-05   5.8401E-02   1.4992E+03   8   8
+         59  PRES gmres        15   8.4236E-09   5.8950E-06   1.0000E-08   2.0261E-02   3.3328E-02    F
+         59  Hmholtz VELX       7   8.6437E-09   6.6441E-01   1.0000E-08
+         59  Hmholtz VELY       8   2.4004E-09   1.1063E+00   1.0000E-08
+             L1/L2 DIV(V)           8.0805E-08   1.5086E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       8.0805E-08   1.5086E-02
+         59  Fluid done  5.9000E-02  5.1869E-02
+      59  5.90000000000E-02  7.97606565371E-02  5.84930082678E-02  2.12676482692E-02      1dragx
+      59  5.90000000000E-02  7.86352742995E-01  7.83896685006E-01  2.45605798924E-03      1dragy
+      59  5.90000000000E-02  1.08743243192E-01  1.10089949782E-01 -1.34670658966E-03      1torqz
+Step     60, t= 6.0000000E-02, DT= 1.0000000E-03, C=  2.072 5.3263E+00 8.5480E-02
+             Solving for fluid
+         60  Project PRES           3.6671E-05   5.7737E-02   1.5745E+03   8   8
+         60  PRES gmres        15   8.9015E-09   5.5493E-06   1.0000E-08   2.0192E-02   3.3278E-02    F
+         60  Hmholtz VELX       7   8.6132E-09   6.6440E-01   1.0000E-08
+         60  Hmholtz VELY       8   2.3880E-09   1.1070E+00   1.0000E-08
+             L1/L2 DIV(V)           7.2607E-08   1.5099E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       7.2607E-08   1.5099E-02
+         60  Fluid done  6.0000E-02  5.1905E-02
+      60  6.00000000000E-02  7.98758781933E-02  5.86354134997E-02  2.12404646936E-02      1dragx
+      60  6.00000000000E-02  7.87476298277E-01  7.85013424567E-01  2.46287370936E-03      1dragy
+      60  6.00000000000E-02  1.09251933253E-01  1.10595197368E-01 -1.34326411511E-03      1torqz
+Step     61, t= 6.1000000E-02, DT= 1.0000000E-03, C=  2.072 5.4122E+00 8.5887E-02
+             Solving for fluid
+         61  Project PRES           3.6943E-05   5.7186E-02   1.5479E+03   8   8
+         61  PRES gmres        16   7.1235E-09   5.5905E-06   1.0000E-08   2.1676E-02   3.7155E-02    F
+         61  Hmholtz VELX       7   8.5736E-09   6.6439E-01   1.0000E-08
+         61  Hmholtz VELY       8   2.3756E-09   1.1077E+00   1.0000E-08
+             L1/L2 DIV(V)           6.4006E-08   1.5094E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       6.4006E-08   1.5094E-02
+         61  Fluid done  6.1000E-02  5.5827E-02
+      61  6.10000000000E-02  7.99919910843E-02  5.87788532157E-02  2.12131378687E-02      1dragx
+      61  6.10000000000E-02  7.88608968441E-01  7.86139207944E-01  2.46976049735E-03      1dragy
+      61  6.10000000000E-02  1.09763877473E-01  1.11103662444E-01 -1.33978497166E-03      1torqz
+Step     62, t= 6.2000000E-02, DT= 1.0000000E-03, C=  2.072 5.5016E+00 8.9446E-02
+             Solving for fluid
+         62  Project PRES           3.6235E-05   5.6744E-02   1.5660E+03   8   8
+         62  PRES gmres        16   6.9328E-09   5.4834E-06   1.0000E-08   2.1595E-02   3.5906E-02    F
+         62  Hmholtz VELX       7   8.5252E-09   6.6436E-01   1.0000E-08
+         62  Hmholtz VELY       8   2.3634E-09   1.1084E+00   1.0000E-08
+             L1/L2 DIV(V)           5.5011E-08   1.5066E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       5.5011E-08   1.5066E-02
+         62  Fluid done  6.2000E-02  5.4515E-02
+      62  6.20000000000E-02  8.01085322590E-02  5.89228562023E-02  2.11856760567E-02      1dragx
+      62  6.20000000000E-02  7.89747588099E-01  7.87270870400E-01  2.47671769918E-03      1dragy
+      62  6.20000000000E-02  1.10277640750E-01  1.11613909872E-01 -1.33626912204E-03      1torqz
+Step     63, t= 6.3000000E-02, DT= 1.0000000E-03, C=  2.072 5.5897E+00 8.8121E-02
+             Solving for fluid
+         63  Project PRES           4.0022E-05   5.6270E-02   1.4060E+03   8   8
+         63  PRES gmres        16   6.6734E-09   6.0564E-06   1.0000E-08   2.1860E-02   3.6490E-02    F
+         63  Hmholtz VELX       7   8.4704E-09   6.6433E-01   1.0000E-08
+         63  Hmholtz VELY       8   2.3513E-09   1.1091E+00   1.0000E-08
+             L1/L2 DIV(V)           4.5640E-08   1.5014E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       4.5640E-08   1.5014E-02
+         63  Fluid done  6.3000E-02  5.5080E-02
+      63  6.30000000000E-02  8.02250252132E-02  5.90669389480E-02  2.11580862652E-02      1dragx
+      63  6.30000000000E-02  7.90889160042E-01  7.88405415553E-01  2.48374448821E-03      1dragy
+      63  6.30000000000E-02  1.10791841831E-01  1.12124558489E-01 -1.33271665837E-03      1torqz
+Step     64, t= 6.4000000E-02, DT= 1.0000000E-03, C=  2.072 5.6785E+00 8.8748E-02
+             Solving for fluid
+         64  Project PRES           3.4816E-05   5.5673E-02   1.5991E+03   8   8
+         64  PRES gmres        15   9.7725E-09   5.2686E-06   1.0000E-08   2.0302E-02   3.3283E-02    F
+         64  Hmholtz VELX       7   8.4126E-09   6.6429E-01   1.0000E-08
+         64  Hmholtz VELY       8   2.3388E-09   1.1098E+00   1.0000E-08
+             L1/L2 DIV(V)           3.5903E-08   1.4940E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       3.5903E-08   1.4940E-02
+         64  Fluid done  6.4000E-02  5.1900E-02
+      64  6.40000000000E-02  8.03410502514E-02  5.92106767080E-02  2.11303735433E-02      1dragx
+      64  6.40000000000E-02  7.92031250349E-01  7.89540411102E-01  2.49083924768E-03      1dragy
+      64  6.40000000000E-02  1.11305336764E-01  1.12634465105E-01 -1.32912834143E-03      1torqz
+Step     65, t= 6.5000000E-02, DT= 1.0000000E-03, C=  2.072 5.7640E+00 8.5560E-02
+             Solving for fluid
+         65  Project PRES           3.7027E-05   5.5036E-02   1.4864E+03   8   8
+         65  PRES gmres        15   7.3977E-09   5.6032E-06   1.0000E-08   2.0213E-02   3.3229E-02    F
+         65  Hmholtz VELX       7   8.3554E-09   6.6425E-01   1.0000E-08
+         65  Hmholtz VELY       8   2.3258E-09   1.1105E+00   1.0000E-08
+             L1/L2 DIV(V)           2.5817E-08   1.4853E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       2.5817E-08   1.4853E-02
+         65  Fluid done  6.5000E-02  5.1922E-02
+      65  6.50000000000E-02  8.04562734446E-02  5.93537322870E-02  2.11025411576E-02      1dragx
+      65  6.50000000000E-02  7.93172113455E-01  7.90674114711E-01  2.49799874400E-03      1dragy
+      65  6.50000000000E-02  1.11817283543E-01  1.13142789786E-01 -1.32550624264E-03      1torqz
+Step     66, t= 6.6000000E-02, DT= 1.0000000E-03, C=  2.072 5.8495E+00 8.5500E-02
+             Solving for fluid
+         66  Project PRES           3.2306E-05   5.4532E-02   1.6880E+03   8   8
+         66  PRES gmres        15   9.5601E-09   4.8888E-06   1.0000E-08   2.0292E-02   3.3359E-02    F
+         66  Hmholtz VELX       7   8.3014E-09   6.6419E-01   1.0000E-08
+         66  Hmholtz VELY       8   2.3123E-09   1.1112E+00   1.0000E-08
+             L1/L2 DIV(V)           1.5398E-08   1.4763E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       1.5398E-08   1.4763E-02
+         66  Fluid done  6.6000E-02  5.2075E-02
+      66  6.60000000000E-02  8.05704466812E-02  5.94958551082E-02  2.10745915730E-02      1dragx
+      66  6.60000000000E-02  7.94310592859E-01  7.91805375309E-01  2.50521755018E-03      1dragy
+      66  6.60000000000E-02  1.12327110297E-01  1.13648964427E-01 -1.32185413006E-03      1torqz
+Step     67, t= 6.7000000E-02, DT= 1.0000000E-03, C=  2.072 5.9352E+00 8.5712E-02
+             Solving for fluid
+         67  Project PRES           3.6259E-05   5.4221E-02   1.4954E+03   8   8
+         67  PRES gmres        15   9.0826E-09   5.4869E-06   1.0000E-08   2.0141E-02   3.3241E-02    F
+         67  Hmholtz VELX       7   8.2521E-09   6.6413E-01   1.0000E-08
+         67  Hmholtz VELY       8   2.2987E-09   1.1120E+00   1.0000E-08
+             L1/L2 DIV(V)           4.6586E-09   1.4681E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       4.6586E-09   1.4681E-02
+         67  Fluid done  6.7000E-02  5.1878E-02
+      67  6.70000000000E-02  8.06833920600E-02  5.96368641284E-02  2.10465279316E-02      1dragx
+      67  6.70000000000E-02  7.95445879639E-01  7.92933391470E-01  2.51248816837E-03      1dragy
+      67  6.70000000000E-02  1.12834423408E-01  1.14152600701E-01 -1.31817729254E-03      1torqz
+Step     68, t= 6.8000000E-02, DT= 1.0000000E-03, C=  2.072 6.0208E+00 8.5546E-02
+             Solving for fluid
+         68  Project PRES           3.3787E-05   5.3979E-02   1.5976E+03   8   8
+         68  PRES gmres        15   9.4334E-09   5.1129E-06   1.0000E-08   2.0212E-02   3.3376E-02    F
+         68  Hmholtz VELX       7   8.2083E-09   6.6406E-01   1.0000E-08
+         68  Hmholtz VELY       8   2.2851E-09   1.1127E+00   1.0000E-08
+             L1/L2 DIV(V)          -6.3813E-09   1.4613E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -6.3813E-09   1.4613E-02
+         68  Fluid done  6.8000E-02  5.1982E-02
+      68  6.80000000000E-02  8.07949777829E-02  5.97766222196E-02  2.10183555632E-02      1dragx
+      68  6.80000000000E-02  7.96577230084E-01  7.94057428088E-01  2.51980199549E-03      1dragy
+      68  6.80000000000E-02  1.13338894092E-01  1.14653375807E-01 -1.31448171468E-03      1torqz
+Step     69, t= 6.9000000E-02, DT= 1.0000000E-03, C=  2.071 6.1066E+00 8.5827E-02
+             Solving for fluid
+         69  Project PRES           3.3374E-05   5.3624E-02   1.6068E+03   8   8
+         69  PRES gmres        15   8.4691E-09   5.0504E-06   1.0000E-08   2.0233E-02   3.3224E-02    F
+         69  Hmholtz VELX       7   8.1697E-09   6.6399E-01   1.0000E-08
+         69  Hmholtz VELY       8   2.2717E-09   1.1135E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.7708E-08   1.4562E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.7708E-08   1.4562E-02
+         69  Fluid done  6.9000E-02  5.1814E-02
+      69  6.90000000000E-02  8.09050897981E-02  5.99150067944E-02  2.09900830037E-02      1dragx
+      69  6.90000000000E-02  7.97703743985E-01  7.95176593072E-01  2.52715091364E-03      1dragy
+      69  6.90000000000E-02  1.13840160261E-01  1.15150933071E-01 -1.31077280941E-03      1torqz
+Step     70, t= 7.0000000E-02, DT= 1.0000000E-03, C=  2.071 6.1920E+00 8.5413E-02
+             Solving for fluid
+         70  Project PRES           3.4186E-05   5.3101E-02   1.5533E+03   8   8
+         70  PRES gmres        15   7.9180E-09   5.1732E-06   1.0000E-08   2.0591E-02   3.4626E-02    F
+         70  Hmholtz VELX       7   8.1352E-09   6.6391E-01   1.0000E-08
+         70  Hmholtz VELY       8   2.2585E-09   1.1142E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.9303E-08   1.4524E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.9303E-08   1.4524E-02
+         70  Fluid done  7.0000E-02  5.3439E-02
+      70  7.00000000000E-02  8.10136082772E-02  6.00518861520E-02  2.09617221252E-02      1dragx
+      70  7.00000000000E-02  7.98824282246E-01  7.96289753284E-01  2.53452896227E-03      1dragy
+      70  7.00000000000E-02  1.14337776437E-01  1.15644830586E-01 -1.30705414899E-03      1torqz
+Step     71, t= 7.1000000E-02, DT= 1.0000000E-03, C=  2.071 6.2795E+00 8.7441E-02
+             Solving for fluid
+         71  Project PRES           3.2608E-05   5.2498E-02   1.6100E+03   8   8
+         71  PRES gmres        16   6.8591E-09   4.9345E-06   1.0000E-08   2.1574E-02   3.5870E-02    F
+         71  Hmholtz VELX       7   8.1027E-09   6.6382E-01   1.0000E-08
+         71  Hmholtz VELY       8   2.2453E-09   1.1150E+00   1.0000E-08
+             L1/L2 DIV(V)          -4.1148E-08   1.4496E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -4.1148E-08   1.4496E-02
+         71  Fluid done  7.1000E-02  5.4454E-02
+      71  7.10000000000E-02  8.11203990467E-02  6.01871117566E-02  2.09332872901E-02      1dragx
+      71  7.10000000000E-02  7.99937548875E-01  7.97395615411E-01  2.54193346372E-03      1dragy
+      71  7.10000000000E-02  1.14831227337E-01  1.16134554004E-01 -1.30332666730E-03      1torqz
+Step     72, t= 7.2000000E-02, DT= 1.0000000E-03, C=  2.071 6.3676E+00 8.8119E-02
+             Solving for fluid
+         72  Project PRES           3.4228E-05   5.1937E-02   1.5174E+03   8   8
+         72  PRES gmres        16   6.6242E-09   5.1796E-06   1.0000E-08   2.3437E-02   3.9407E-02    F
+         72  Hmholtz VELX       7   8.0703E-09   6.6373E-01   1.0000E-08
+         72  Hmholtz VELY       8   2.2322E-09   1.1158E+00   1.0000E-08
+             L1/L2 DIV(V)          -5.3226E-08   1.4468E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -5.3226E-08   1.4468E-02
+         72  Fluid done  7.2000E-02  5.9091E-02
+      72  7.20000000000E-02  8.12253236858E-02  6.03205298998E-02  2.09047937860E-02      1dragx
+      72  7.20000000000E-02  8.01042286753E-01  7.98492921560E-01  2.54936519321E-03      1dragy
+      72  7.20000000000E-02  1.15319991795E-01  1.16619580432E-01 -1.29958863731E-03      1torqz
+Step     73, t= 7.3000000E-02, DT= 1.0000000E-03, C=  2.071 6.4607E+00 9.3106E-02
+             Solving for fluid
+         73  Project PRES           3.6446E-05   5.1478E-02   1.4125E+03   8   8
+         73  PRES gmres        15   9.9646E-09   5.5152E-06   1.0000E-08   2.0153E-02   3.3300E-02    F
+         73  Hmholtz VELX       7   8.0365E-09   6.6363E-01   1.0000E-08
+         73  Hmholtz VELY       8   2.2193E-09   1.1165E+00   1.0000E-08
+             L1/L2 DIV(V)          -6.5517E-08   1.4437E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -6.5517E-08   1.4437E-02
+         73  Fluid done  7.3000E-02  5.1946E-02
+      73  7.30000000000E-02  8.13282588497E-02  6.04520027936E-02  2.08762560561E-02      1dragx
+      73  7.30000000000E-02  8.02137479837E-01  7.99580652293E-01  2.55682754410E-03      1dragy
+      73  7.30000000000E-02  1.15803617321E-01  1.17099453738E-01 -1.29583641680E-03      1torqz
+Step     74, t= 7.4000000E-02, DT= 1.0000000E-03, C=  2.071 6.5463E+00 8.5645E-02
+             Solving for fluid
+         74  Project PRES           2.8966E-05   5.1128E-02   1.7651E+03   8   8
+         74  PRES gmres        15   9.0584E-09   4.3833E-06   1.0000E-08   2.0227E-02   3.3315E-02    F
+         74  Hmholtz VELX       7   8.0010E-09   6.6352E-01   1.0000E-08
+         74  Hmholtz VELY       8   2.2068E-09   1.1173E+00   1.0000E-08
+             L1/L2 DIV(V)          -7.8006E-08   1.4399E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -7.8006E-08   1.4399E-02
+         74  Fluid done  7.4000E-02  5.1897E-02
+      74  7.40000000000E-02  8.14291094297E-02  6.05814231544E-02  2.08476862753E-02      1dragx
+      74  7.40000000000E-02  8.03222458076E-01  8.00658133055E-01  2.56432502185E-03      1dragy
+      74  7.40000000000E-02  1.16281762142E-01  1.17573827819E-01 -1.29206567756E-03      1torqz
+Step     75, t= 7.5000000E-02, DT= 1.0000000E-03, C=  2.071 6.6319E+00 8.5532E-02
+             Solving for fluid
+         75  Project PRES           2.5233E-05   5.0890E-02   2.0168E+03   8   8
+         75  PRES gmres        14   8.9230E-09   3.8185E-06   1.0000E-08   1.8992E-02   3.0845E-02    F
+         75  Hmholtz VELX       7   7.9645E-09   6.6342E-01   1.0000E-08
+         75  Hmholtz VELY       8   2.1945E-09   1.1181E+00   1.0000E-08
+             L1/L2 DIV(V)          -9.0669E-08   1.4353E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -9.0669E-08   1.4353E-02
+         75  Fluid done  7.5000E-02  4.9436E-02
+      75  7.50000000000E-02  8.15278059590E-02  6.07087123058E-02  2.08190936532E-02      1dragx
+      75  7.50000000000E-02  8.04296865236E-01  8.01725003635E-01  2.57186160079E-03      1dragy
+      75  7.50000000000E-02  1.16754186578E-01  1.18042459267E-01 -1.28827268957E-03      1torqz
+Step     76, t= 7.6000000E-02, DT= 1.0000000E-03, C=  2.071 6.7153E+00 8.3384E-02
+             Solving for fluid
+         76  Project PRES           2.7251E-05   5.0778E-02   1.8633E+03   8   8
+         76  PRES gmres        15   8.1553E-09   4.1238E-06   1.0000E-08   2.0186E-02   3.3324E-02    F
+         76  Hmholtz VELX       7   7.9280E-09   6.6331E-01   1.0000E-08
+         76  Hmholtz VELY       8   2.1827E-09   1.1189E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.0349E-07   1.4303E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.0349E-07   1.4303E-02
+         76  Fluid done  7.6000E-02  5.1963E-02
+      76  7.60000000000E-02  8.16242898503E-02  6.08338052878E-02  2.07904845625E-02      1dragx
+      76  7.60000000000E-02  8.05360534620E-01  8.02781095182E-01  2.57943943803E-03      1dragy
+      76  7.60000000000E-02  1.17220709624E-01  1.18505164899E-01 -1.28445527524E-03      1torqz
+Step     77, t= 7.7000000E-02, DT= 1.0000000E-03, C=  2.071 6.8008E+00 8.5563E-02
+             Solving for fluid
+         77  Project PRES           2.8628E-05   5.0783E-02   1.7739E+03   8   8
+         77  PRES gmres        15   9.1632E-09   4.3323E-06   1.0000E-08   2.0222E-02   3.3401E-02    F
+         77  Hmholtz VELX       7   7.8923E-09   6.6319E-01   1.0000E-08
+         77  Hmholtz VELY       8   2.1712E-09   1.1196E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.1645E-07   1.4251E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.1645E-07   1.4251E-02
+         77  Fluid done  7.7000E-02  5.2016E-02
+      77  7.70000000000E-02  8.17185000996E-02  6.09566367801E-02  2.07618633195E-02      1dragx
+      77  7.70000000000E-02  8.06413365153E-01  8.03826306919E-01  2.58705823414E-03      1dragy
+      77  7.70000000000E-02  1.17681168061E-01  1.18961781295E-01 -1.28061323416E-03      1torqz
+Step     78, t= 7.8000000E-02, DT= 1.0000000E-03, C=  2.071 6.8864E+00 8.5614E-02
+             Solving for fluid
+         78  Project PRES           2.7420E-05   5.0868E-02   1.8551E+03   8   8
+         78  PRES gmres        15   9.0472E-09   4.1494E-06   1.0000E-08   2.0213E-02   3.3218E-02    F
+         78  Hmholtz VELX       7   7.8573E-09   6.6308E-01   1.0000E-08
+         78  Hmholtz VELY       8   2.1602E-09   1.1204E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.2952E-07   1.4201E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.2952E-07   1.4201E-02
+         78  Fluid done  7.8000E-02  5.1840E-02
+      78  7.80000000000E-02  8.18103719458E-02  6.10771386577E-02  2.07332332880E-02      1dragx
+      78  7.80000000000E-02  8.07455270600E-01  8.04860555331E-01  2.59471526952E-03      1dragy
+      78  7.80000000000E-02  1.18135406536E-01  1.19412154774E-01 -1.27674823766E-03      1torqz
+Step     79, t= 7.9000000E-02, DT= 1.0000000E-03, C=  2.071 6.9719E+00 8.5481E-02
+             Solving for fluid
+         79  Project PRES           2.5871E-05   5.0993E-02   1.9710E+03   8   8
+         79  PRES gmres        14   9.1760E-09   3.9150E-06   1.0000E-08   1.8857E-02   3.0698E-02    F
+         79  Hmholtz VELX       7   7.8222E-09   6.6296E-01   1.0000E-08
+         79  Hmholtz VELY       8   2.1495E-09   1.1212E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.4269E-07   1.4155E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.4269E-07   1.4155E-02
+         79  Fluid done  7.9000E-02  4.9579E-02
+      79  7.90000000000E-02  8.18998467556E-02  6.11952488030E-02  2.07045979526E-02      1dragx
+      79  7.90000000000E-02  8.08486203469E-01  8.05883797527E-01  2.60240594243E-03      1dragy
+      79  7.90000000000E-02  1.18583296453E-01  1.19856159804E-01 -1.27286335099E-03      1torqz
+Step     80, t= 8.0000000E-02, DT= 1.0000000E-03, C=  2.071 7.0551E+00 8.3206E-02
+             Solving for fluid
+         80  Project PRES           2.7423E-05   5.1131E-02   1.8646E+03   8   8
+         80  PRES gmres        15   6.9315E-09   4.1498E-06   1.0000E-08   2.0169E-02   3.3388E-02    F
+         80  Hmholtz VELX       7   7.7858E-09   6.6285E-01   1.0000E-08
+         80  Hmholtz VELY       8   2.1392E-09   1.1220E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.5594E-07   1.4115E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.5594E-07   1.4115E-02
+         80  Fluid done  8.0000E-02  5.2055E-02
+      80  8.00000000000E-02  8.19868840473E-02  6.13109223362E-02  2.06759617111E-02      1dragx
+      80  8.00000000000E-02  8.09506201410E-01  8.06896076842E-01  2.61012456809E-03      1dragy
+      80  8.00000000000E-02  1.19024760580E-01  1.20293722963E-01 -1.26896238328E-03      1torqz
+Step     81, t= 8.1000000E-02, DT= 1.0000000E-03, C=  2.071 7.1408E+00 8.5662E-02
+             Solving for fluid
+         81  Project PRES           2.8261E-05   5.1244E-02   1.8133E+03   8   8
+         81  PRES gmres        15   8.8264E-09   4.2766E-06   1.0000E-08   2.0250E-02   3.3597E-02    F
+         81  Hmholtz VELX       7   7.7473E-09   6.6273E-01   1.0000E-08
+         81  Hmholtz VELY       8   2.1292E-09   1.1228E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.6925E-07   1.4081E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.6925E-07   1.4081E-02
+         81  Fluid done  8.1000E-02  5.2169E-02
+      81  8.10000000000E-02  8.20714621598E-02  6.14241318637E-02  2.06473302961E-02      1dragx
+      81  8.10000000000E-02  8.10515371217E-01  8.07897506014E-01  2.61786520274E-03      1dragy
+      81  8.10000000000E-02  1.19459767021E-01  1.20724816265E-01 -1.26504924468E-03      1torqz
+Step     82, t= 8.2000000E-02, DT= 1.0000000E-03, C=  2.071 7.2266E+00 8.5795E-02
+             Solving for fluid
+         82  Project PRES           2.9057E-05   5.1277E-02   1.7647E+03   8   8
+         82  PRES gmres        15   8.6199E-09   4.3971E-06   1.0000E-08   2.0327E-02   3.3353E-02    F
+         82  Hmholtz VELX       7   7.7059E-09   6.6262E-01   1.0000E-08
+         82  Hmholtz VELY       8   2.1194E-09   1.1236E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.8259E-07   1.4051E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.8259E-07   1.4051E-02
+         82  Fluid done  8.2000E-02  5.1937E-02
+      82  8.20000000000E-02  8.21535609881E-02  6.15348501022E-02  2.06187108859E-02      1dragx
+      82  8.20000000000E-02  8.11513761137E-01  8.08888138801E-01  2.62562233541E-03      1dragy
+      82  8.20000000000E-02  1.19888272689E-01  1.21149400114E-01 -1.26112742466E-03      1torqz
+Step     83, t= 8.3000000E-02, DT= 1.0000000E-03, C=  2.071 7.3121E+00 8.5494E-02
+             Solving for fluid
+         83  Project PRES           2.8276E-05   5.1189E-02   1.8103E+03   8   8
+         83  PRES gmres        15   7.1913E-09   4.2789E-06   1.0000E-08   2.0217E-02   3.3238E-02    F
+         83  Hmholtz VELX       7   7.6616E-09   6.6250E-01   1.0000E-08
+         83  Hmholtz VELY       8   2.1098E-09   1.1243E+00   1.0000E-08
+             L1/L2 DIV(V)          -1.9595E-07   1.4021E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -1.9595E-07   1.4021E-02
+         83  Fluid done  8.3000E-02  5.1834E-02
+      83  8.30000000000E-02  8.22331291687E-02  6.16430171196E-02  2.05901120490E-02      1dragx
+      83  8.30000000000E-02  8.12501134003E-01  8.09867742683E-01  2.63339131978E-03      1dragy
+      83  8.30000000000E-02  1.20310122675E-01  1.21567322345E-01 -1.25719967035E-03      1torqz
+Step     84, t= 8.4000000E-02, DT= 1.0000000E-03, C=  2.070 7.3980E+00 8.5918E-02
+             Solving for fluid
+         84  Project PRES           2.4620E-05   5.0995E-02   2.0713E+03   8   8
+         84  PRES gmres        14   8.8165E-09   3.7257E-06   1.0000E-08   1.9622E-02   3.1588E-02    F
+         84  Hmholtz VELX       7   7.6146E-09   6.6239E-01   1.0000E-08
+         84  Hmholtz VELY       8   2.1003E-09   1.1251E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.0930E-07   1.3989E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.0930E-07   1.3989E-02
+         84  Fluid done  8.4000E-02  5.1614E-02
+      84  8.40000000000E-02  8.23100472071E-02  6.17485035382E-02  2.05615436689E-02      1dragx
+      84  8.40000000000E-02  8.13476724162E-01  8.10835555654E-01  2.64116850809E-03      1dragy
+      84  8.40000000000E-02  1.20724940162E-01  1.21978208047E-01 -1.25326788460E-03      1torqz
+Step     85, t= 8.5000000E-02, DT= 1.0000000E-03, C=  2.070 7.4839E+00 8.5900E-02
+             Solving for fluid
+         85  Project PRES           2.3029E-05   5.0761E-02   2.2042E+03   8   8
+         85  PRES gmres        14   9.0969E-09   3.4849E-06   1.0000E-08   1.8868E-02   3.0794E-02    F
+         85  Hmholtz VELX       7   7.5649E-09   6.6229E-01   1.0000E-08
+         85  Hmholtz VELY       8   2.0909E-09   1.1259E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.2263E-07   1.3951E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.2263E-07   1.3951E-02
+         85  Fluid done  8.5000E-02  4.9426E-02
+      85  8.50000000000E-02  8.23841010208E-02  6.18510840971E-02  2.05330169237E-02      1dragx
+      85  8.50000000000E-02  8.14439083137E-01  8.11790132051E-01  2.64895108572E-03      1dragy
+      85  8.50000000000E-02  1.21132051799E-01  1.22381385039E-01 -1.24933324011E-03      1torqz
+Step     86, t= 8.6000000E-02, DT= 1.0000000E-03, C=  2.070 7.5669E+00 8.3032E-02
+             Solving for fluid
+         86  Project PRES           2.4717E-05   5.0552E-02   2.0453E+03   8   8
+         86  PRES gmres        15   7.2199E-09   3.7403E-06   1.0000E-08   2.0163E-02   3.3575E-02    F
+         86  Hmholtz VELX       7   7.5125E-09   6.6218E-01   1.0000E-08
+         86  Hmholtz VELY       8   2.0816E-09   1.1267E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.3591E-07   1.3907E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.3591E-07   1.3907E-02
+         86  Fluid done  8.6000E-02  5.2265E-02
+      86  8.60000000000E-02  8.24549776359E-02  6.19504333169E-02  2.05045443190E-02      1dragx
+      86  8.60000000000E-02  8.15386095142E-01  8.12729358458E-01  2.65673668322E-03      1dragy
+      86  8.60000000000E-02  1.21530483994E-01  1.22775880450E-01 -1.24539645651E-03      1torqz
+Step     87, t= 8.7000000E-02, DT= 1.0000000E-03, C=  2.070 7.6528E+00 8.5888E-02
+             Solving for fluid
+         87  Project PRES           2.5317E-05   5.0395E-02   1.9906E+03   8   8
+         87  PRES gmres        15   6.9239E-09   3.8311E-06   1.0000E-08   2.1757E-02   3.6211E-02    F
+         87  Hmholtz VELX       7   7.4573E-09   6.6209E-01   1.0000E-08
+         87  Hmholtz VELY       8   2.0722E-09   1.1274E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.4912E-07   1.3856E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.4912E-07   1.3856E-02
+         87  Fluid done  8.7000E-02  5.6657E-02
+      87  8.70000000000E-02  8.25222855716E-02  6.20461458478E-02  2.04761397238E-02      1dragx
+      87  8.70000000000E-02  8.16315166352E-01  8.13650643458E-01  2.66452289367E-03      1dragy
+      87  8.70000000000E-02  1.21919034562E-01  1.23160492716E-01 -1.24145815334E-03      1torqz
+Step     88, t= 8.8000000E-02, DT= 1.0000000E-03, C=  2.070 7.7434E+00 9.0542E-02
+             Solving for fluid
+         88  Project PRES           2.2827E-05   5.0270E-02   2.2022E+03   8   8
+         88  PRES gmres        14   8.4761E-09   3.4544E-06   1.0000E-08   1.9668E-02   3.1540E-02    F
+         88  Hmholtz VELX       7   7.3996E-09   6.6199E-01   1.0000E-08
+         88  Hmholtz VELY       8   2.0628E-09   1.1282E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.6225E-07   1.3802E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.6225E-07   1.3802E-02
+         88  Fluid done  8.8000E-02  5.0145E-02
+      88  8.80000000000E-02  8.25855927232E-02  6.21377743693E-02  2.04478183539E-02      1dragx
+      88  8.80000000000E-02  8.17223516691E-01  8.14551209857E-01  2.67230683395E-03      1dragy
+      88  8.80000000000E-02  1.22296393140E-01  1.23533912323E-01 -1.23751918318E-03      1torqz
+Step     89, t= 8.9000000E-02, DT= 1.0000000E-03, C=  2.070 7.8273E+00 8.3942E-02
+             Solving for fluid
+         89  Project PRES           2.0825E-05   5.0138E-02   2.4076E+03   8   8
+         89  PRES gmres        13   8.3437E-09   3.1514E-06   1.0000E-08   1.7425E-02   2.8334E-02    F
+         89  Hmholtz VELX       7   7.3400E-09   6.6191E-01   1.0000E-08
+         89  Hmholtz VELY       8   2.0534E-09   1.1289E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.7527E-07   1.3747E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.7527E-07   1.3747E-02
+         89  Fluid done  8.9000E-02  4.6959E-02
+      89  8.90000000000E-02  8.26444674627E-02  6.22248707856E-02  2.04195966771E-02      1dragx
+      89  8.90000000000E-02  8.18108461277E-01  8.15428376441E-01  2.68008483571E-03      1dragy
+      89  8.90000000000E-02  1.22661264029E-01  1.23894844907E-01 -1.23358087780E-03      1torqz
+Step     90, t= 9.0000000E-02, DT= 1.0000000E-03, C=  2.070 7.9079E+00 8.0571E-02
+             Solving for fluid
+         90  Project PRES           2.0346E-05   4.9973E-02   2.4561E+03   8   8
+         90  PRES gmres        14   7.7082E-09   3.0790E-06   1.0000E-08   1.8866E-02   3.0774E-02    F
+         90  Hmholtz VELX       7   7.2796E-09   6.6183E-01   1.0000E-08
+         90  Hmholtz VELY       8   2.0439E-09   1.1297E+00   1.0000E-08
+             L1/L2 DIV(V)          -2.8817E-07   1.3694E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -2.8817E-07   1.3694E-02
+         90  Fluid done  9.0000E-02  4.9332E-02
+      90  9.00000000000E-02  8.26985093133E-02  6.23070170607E-02  2.03914922526E-02      1dragx
+      90  9.00000000000E-02  8.18967586879E-01  8.16279734571E-01  2.68785230874E-03      1dragy
+      90  9.00000000000E-02  1.23012450513E-01  1.24242095687E-01 -1.22964517360E-03      1torqz
+Step     91, t= 9.1000000E-02, DT= 1.0000000E-03, C=  2.070 7.9908E+00 8.2971E-02
+             Solving for fluid
+         91  Project PRES           2.1753E-05   4.9763E-02   2.2877E+03   8   8
+         91  PRES gmres        14   8.7610E-09   3.2918E-06   1.0000E-08   1.9080E-02   3.0930E-02    F
+         91  Hmholtz VELX       7   7.2195E-09   6.6175E-01   1.0000E-08
+         91  Hmholtz VELY       8   2.0344E-09   1.1304E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.0091E-07   1.3644E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.0091E-07   1.3644E-02
+         91  Fluid done  9.1000E-02  4.9534E-02
+      91  9.10000000000E-02  8.27473630827E-02  6.23838395617E-02  2.03635235210E-02      1dragx
+      91  9.10000000000E-02  8.19798801673E-01  8.17103197946E-01  2.69560372664E-03      1dragy
+      91  9.10000000000E-02  1.23348887732E-01  1.24574602377E-01 -1.22571464591E-03      1torqz
+Step     92, t= 9.2000000E-02, DT= 1.0000000E-03, C=  2.070 8.0740E+00 8.3126E-02
+             Solving for fluid
+         92  Project PRES           2.1812E-05   4.9519E-02   2.2702E+03   8   8
+         92  PRES gmres        14   8.0096E-09   3.3008E-06   1.0000E-08   2.6257E-02   4.2889E-02    F
+         92  Hmholtz VELX       7   7.1606E-09   6.6169E-01   1.0000E-08
+         92  Hmholtz VELY       8   2.0249E-09   1.1311E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.1350E-07   1.3600E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.1350E-07   1.3600E-02
+         92  Fluid done  9.2000E-02  6.9565E-02
+      92  9.20000000000E-02  8.27907216281E-02  6.24550120728E-02  2.03357095553E-02      1dragx
+      92  9.20000000000E-02  8.20600317549E-01  8.17896984844E-01  2.70333270460E-03      1dragy
+      92  9.20000000000E-02  1.23669644519E-01  1.24891436994E-01 -1.22179247518E-03      1torqz
+Step     93, t= 9.3000000E-02, DT= 1.0000000E-03, C=  2.070 8.1932E+00 1.1920E-01
+             Solving for fluid
+         93  Project PRES           2.0095E-05   4.9261E-02   2.4514E+03   8   8
+         93  PRES gmres        13   7.7235E-09   3.0409E-06   1.0000E-08   1.7470E-02   2.8496E-02    F
+         93  Hmholtz VELX       7   7.1035E-09   6.6163E-01   1.0000E-08
+         93  Hmholtz VELY       8   2.0155E-09   1.1318E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.2589E-07   1.3561E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.2589E-07   1.3561E-02
+         93  Fluid done  9.3000E-02  4.7086E-02
+      93  9.30000000000E-02  8.28283274252E-02  6.25202576867E-02  2.03080697385E-02      1dragx
+      93  9.30000000000E-02  8.21370654576E-01  8.18659622476E-01  2.71103209983E-03      1dragy
+      93  9.30000000000E-02  1.23973929567E-01  1.25191811962E-01 -1.21788239487E-03      1torqz
+Step     94, t= 9.4000000E-02, DT= 1.0000000E-03, C=  2.070 8.2738E+00 8.0658E-02
+             Solving for fluid
+         94  Project PRES           2.0851E-05   4.9014E-02   2.3507E+03   8   8
+         94  PRES gmres        14   7.2065E-09   3.1553E-06   1.0000E-08   1.8876E-02   3.0681E-02    F
+         94  Hmholtz VELX       7   7.0485E-09   6.6158E-01   1.0000E-08
+         94  Hmholtz VELY       8   2.0062E-09   1.1326E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.3809E-07   1.3527E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.3809E-07   1.3527E-02
+         94  Fluid done  9.4000E-02  4.9307E-02
+      94  9.40000000000E-02  8.28599811344E-02  6.25793577930E-02  2.02806233413E-02      1dragx
+      94  9.40000000000E-02  8.22108722840E-01  8.19390028675E-01  2.71869416477E-03      1dragy
+      94  9.40000000000E-02  1.24261125439E-01  1.25475114051E-01 -1.21398861259E-03      1torqz
+Step     95, t= 9.5000000E-02, DT= 1.0000000E-03, C=  2.070 8.3569E+00 8.3038E-02
+             Solving for fluid
+         95  Project PRES           2.2847E-05   4.8802E-02   2.1360E+03   8   8
+         95  PRES gmres        14   8.4910E-09   3.4575E-06   1.0000E-08   1.8823E-02   3.0876E-02    F
+         95  Hmholtz VELX       7   6.9957E-09   6.6154E-01   1.0000E-08
+         95  Hmholtz VELY       8   1.9969E-09   1.1333E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.5006E-07   1.3498E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.5006E-07   1.3498E-02
+         95  Fluid done  9.5000E-02  4.9540E-02
+      95  9.50000000000E-02  8.28855552136E-02  6.26321662399E-02  2.02533889737E-02      1dragx
+      95  9.50000000000E-02  8.22813951241E-01  8.20087640500E-01  2.72631074111E-03      1dragy
+      95  9.50000000000E-02  1.24530841055E-01  1.25740956763E-01 -1.21011570754E-03      1torqz
+Step     96, t= 9.6000000E-02, DT= 1.0000000E-03, C=  2.070 8.4402E+00 8.3293E-02
+             Solving for fluid
+         96  Project PRES           2.2674E-05   4.8643E-02   2.1454E+03   8   8
+         96  PRES gmres        14   7.8168E-09   3.4311E-06   1.0000E-08   1.8930E-02   3.0954E-02    F
+         96  Hmholtz VELX       7   6.9449E-09   6.6150E-01   1.0000E-08
+         96  Hmholtz VELY       8   1.9877E-09   1.1340E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.6180E-07   1.3471E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.6180E-07   1.3471E-02
+         96  Fluid done  9.6000E-02  4.9585E-02
+      96  9.60000000000E-02  8.29050031091E-02  6.26786191620E-02  2.02263839472E-02      1dragx
+      96  9.60000000000E-02  8.23486368694E-01  8.20752495169E-01  2.73387352458E-03      1dragy
+      96  9.60000000000E-02  1.24782947578E-01  1.25989216067E-01 -1.20626848897E-03      1torqz
+Step     97, t= 9.7000000E-02, DT= 1.0000000E-03, C=  2.070 8.5234E+00 8.3198E-02
+             Solving for fluid
+         97  Project PRES           2.0971E-05   4.8547E-02   2.3150E+03   8   8
+         97  PRES gmres        13   8.2759E-09   3.1735E-06   1.0000E-08   1.7458E-02   2.8357E-02    F
+         97  Hmholtz VELX       7   6.8960E-09   6.6148E-01   1.0000E-08
+         97  Hmholtz VELY       8   1.9786E-09   1.1346E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.7327E-07   1.3446E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.7327E-07   1.3446E-02
+         97  Fluid done  9.7000E-02  4.6939E-02
+      97  9.70000000000E-02  8.29183530841E-02  6.27187294688E-02  2.01996236153E-02      1dragx
+      97  9.70000000000E-02  8.24126544175E-01  8.21385169832E-01  2.74137434331E-03      1dragy
+      97  9.70000000000E-02  1.25017560699E-01  1.26220012537E-01 -1.20245183862E-03      1torqz
+Step     98, t= 9.8000000E-02, DT= 1.0000000E-03, C=  2.070 8.6039E+00 8.0525E-02
+             Solving for fluid
+         98  Project PRES           1.9974E-05   4.8512E-02   2.4288E+03   8   8
+         98  PRES gmres        13   9.4909E-09   3.0226E-06   1.0000E-08   1.7808E-02   2.8597E-02    F
+         98  Hmholtz VELX       7   6.8489E-09   6.6146E-01   1.0000E-08
+         98  Hmholtz VELY       8   1.9696E-09   1.1353E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.8448E-07   1.3424E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.8448E-07   1.3424E-02
+         98  Fluid done  9.8000E-02  4.7416E-02
+      98  9.80000000000E-02  8.29256847096E-02  6.27525639130E-02  2.01731207966E-02      1dragx
+      98  9.80000000000E-02  8.24735365664E-01  8.21986560241E-01  2.74880542292E-03      1dragy
+      98  9.80000000000E-02  1.25234961047E-01  1.26433631602E-01 -1.19867055501E-03      1torqz
+Step     99, t= 9.9000000E-02, DT= 1.0000000E-03, C=  2.070 8.6850E+00 8.1073E-02
+             Solving for fluid
+         99  Project PRES           2.0436E-05   4.8530E-02   2.3747E+03   8   8
+         99  PRES gmres        14   7.7086E-09   3.0925E-06   1.0000E-08   1.8925E-02   3.0941E-02    F
+         99  Hmholtz VELX       7   6.8032E-09   6.6145E-01   1.0000E-08
+         99  Hmholtz VELY       8   1.9609E-09   1.1360E+00   1.0000E-08
+             L1/L2 DIV(V)          -3.9539E-07   1.3403E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -3.9539E-07   1.3403E-02
+         99  Fluid done  9.9000E-02  4.9503E-02
+      99  9.90000000000E-02  8.29270973405E-02  6.27802119887E-02  2.01468853518E-02      1dragx
+      99  9.90000000000E-02  8.25313740889E-01  8.22557581336E-01  2.75615955352E-03      1dragy
+      99  9.90000000000E-02  1.25435483983E-01  1.26630413230E-01 -1.19492924668E-03      1torqz
+Step    100, t= 1.0000000E-01, DT= 1.0000000E-03, C=  2.070 8.7681E+00 8.3124E-02
+             Solving for fluid
+        100  Project PRES           2.0489E-05   4.8579E-02   2.3710E+03   8   8
+        100  PRES gmres        14   7.0847E-09   3.1005E-06   1.0000E-08   1.8902E-02   3.0740E-02    F
+        100  Hmholtz VELX       7   6.7588E-09   6.6145E-01   1.0000E-08
+        100  Hmholtz VELY       8   1.9525E-09   1.1366E+00   1.0000E-08
+             L1/L2 DIV(V)          -4.0599E-07   1.3384E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -4.0599E-07   1.3384E-02
+        100  Fluid done  1.0000E-01  4.9289E-02
+     100  1.00000000000E-01  8.29226871078E-02  6.28017631690E-02  2.01209239388E-02      1dragx
+     100  1.00000000000E-01  8.25862358616E-01  8.23098928455E-01  2.76343016082E-03      1dragy
+     100  1.00000000000E-01  1.25619432903E-01  1.26810665182E-01 -1.19123227863E-03      1torqz
+Step    101, t= 1.0100000E-01, DT= 1.0000000E-03, C=  2.070 8.8510E+00 8.2930E-02
+             Solving for fluid
+        101  Project PRES           1.9277E-05   4.8640E-02   2.5233E+03   8   8
+        101  PRES gmres        13   7.7817E-09   2.9171E-06   1.0000E-08   1.7456E-02   2.8426E-02    F
+        101  Hmholtz VELX       7   6.7154E-09   6.6146E-01   1.0000E-08
+        101  Hmholtz VELY       8   1.9446E-09   1.1373E+00   1.0000E-08
+             L1/L2 DIV(V)          -4.1627E-07   1.3367E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL      -4.1627E-07   1.3367E-02
+        101  Fluid done  1.0100E-01  4.7099E-02
+     200  2.00000000000E-01  9.53367638210E-02  7.79475914405E-02  1.73891723805E-02      1dragx
+     200  2.00000000000E-01  9.52387632622E-01  9.48859702015E-01  3.52793060706E-03      1dragy
+     200  2.00000000000E-01  1.78655367273E-01  1.79486777450E-01 -8.31410177216E-04      1torqz
+Step    201, t= 2.0100000E-01, DT= 1.0000000E-03, C=  2.070 1.7079E+01 8.2282E+00
+             Solving for fluid
+        201  Project PRES           1.2367E-05   5.0057E-02   4.0476E+03   8   8
+        201  PRES gmres        13   6.7580E-09   1.8715E-06   1.0000E-08   1.7619E-02   2.8982E-02    F
+        201  Hmholtz VELX       7   8.2317E-09   6.7092E-01   1.0000E-08
+        201  Hmholtz VELY       8   2.2959E-09   1.1908E+00   1.0000E-08
+             L1/L2 DIV(V)           2.3569E-07   1.2832E-02
+             L1/L2 QTL              0.0000E+00   0.0000E+00
+             L1/L2 DIV(V)-QTL       2.3569E-07   1.2832E-02
+        201  Fluid done  2.0100E-01  5.0027E-02

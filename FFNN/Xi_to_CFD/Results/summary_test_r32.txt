@@ -1,0 +1,767 @@
+Testing accuracy of low dimensional initializations.
+Run arguments:
+restart_dataset	test
+rank	32
+test_full_restart	False
+n_samp	50
+tau	10.5
+dt	0.001
+Re	17500
+transient	50
+datapath	../../../Re_17500/
+ncpu	16
+savepath	../Results/
+save_file	results
+summ_file	summary
+
+
+Sample 1 of 50.
+#
+NN initial normalized velocity residual: 0.00195
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09671   0.89179   0.11787   1.07418   0.07131   0.68021   0.01305   0.12304
+NN:    0.09757   0.86024   0.14418   1.09089   0.01475   0.00440   0.01628   0.14208
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09663   0.89094   0.11787   1.07418   0.07131   0.68021   0.01304   0.12273
+NN:    0.09751   0.85930   0.14418   1.07790   0.06107   0.52768   0.01626   0.14138
+
+
+Sample 2 of 50.
+#
+NN initial normalized velocity residual: 0.0002
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09731   0.87710   0.13044   1.06225   0.06652   0.65570   0.01357   0.12500
+NN:    0.09819   0.85592   0.31261   1.43873   0.01500   0.00429   0.01442   0.13558
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09722   0.87625   0.13044   1.06076   0.06652   0.65570   0.01354   0.12468
+NN:    0.09811   0.85506   0.13406   1.06569   0.06469   0.58391   0.01421   0.13488
+
+
+Sample 3 of 50.
+#
+NN initial normalized velocity residual: 0.00024
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09752   0.85604   0.13836   1.05778   0.06588   0.58838   0.01449   0.13133
+NN:    0.09628   0.88594   0.11725   1.06591   0.02339   0.00199   0.01293   0.12368
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09760   0.85673   0.13836   1.05778   0.06588   0.58838   0.01448   0.13126
+NN:    0.09635   0.88685   0.11725   1.06591   0.07365   0.69122   0.01290   0.12306
+
+
+Sample 4 of 50.
+#
+NN initial normalized velocity residual: 0.00033
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09658   0.85783   0.13836   1.06881   0.06588   0.58838   0.01478   0.13237
+NN:    0.09707   0.83811   0.13983   1.05428   0.02257   0.00233   0.01458   0.13102
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09664   0.85852   0.13836   1.06881   0.06588   0.58838   0.01479   0.13231
+NN:    0.09714   0.83881   0.13983   1.05428   0.06436   0.56308   0.01456   0.13073
+
+
+Sample 5 of 50.
+#
+NN initial normalized velocity residual: 0.00081
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09625   0.86720   0.13836   1.07327   0.06588   0.58838   0.01480   0.13422
+NN:    0.09634   0.84176   0.13209   1.05507   0.02127   0.00257   0.01434   0.12876
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09632   0.86798   0.13836   1.07327   0.06588   0.58838   0.01481   0.13405
+NN:    0.09641   0.84251   0.13209   1.05507   0.06170   0.59058   0.01431   0.12837
+
+
+Sample 6 of 50.
+#
+NN initial normalized velocity residual: 0.00123
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09503   0.87792   0.11678   1.07327   0.06588   0.61147   0.01330   0.12793
+NN:    0.09496   0.87025   0.14891   1.33457   0.01717  -0.03013   0.01326   0.13115
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09498   0.87809   0.11678   1.07327   0.06588   0.61147   0.01330   0.12819
+NN:    0.09491   0.87056   0.11643   1.07151   0.06596   0.57941   0.01322   0.13077
+
+
+Sample 7 of 50.
+#
+NN initial normalized velocity residual: 0.00089
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09566   0.88792   0.11678   1.07327   0.06984   0.66402   0.01294   0.12231
+NN:    0.09623   0.83944   0.19167   1.07163  -0.16030   0.00219   0.01567   0.14119
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09574   0.88854   0.11678   1.07327   0.06984   0.66402   0.01293   0.12227
+NN:    0.09633   0.83994   0.14227   1.07163   0.06285   0.54502   0.01543   0.14104
+
+
+Sample 8 of 50.
+#
+NN initial normalized velocity residual: 0.00108
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09674   0.87079   0.12495   1.07327   0.06704   0.64039   0.01311   0.12633
+NN:    0.09637   0.85509   0.15463   1.09130   0.02122   0.00245   0.01673   0.14857
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09679   0.87099   0.12495   1.07327   0.06704   0.64039   0.01312   0.12660
+NN:    0.09643   0.85534   0.15463   1.09130   0.05668   0.50693   0.01673   0.14863
+
+
+Sample 9 of 50.
+#
+NN initial normalized velocity residual: 0.00029
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09845   0.84114   0.13746   1.06472   0.06070   0.49996   0.01476   0.13970
+NN:    0.10093   0.81319   0.13532   1.06745   0.02136   0.00236   0.01473   0.15270
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09849   0.84127   0.13746   1.06472   0.06070   0.49996   0.01478   0.14002
+NN:    0.10100   0.81330   0.13532   1.06745   0.06732   0.50296   0.01472   0.15286
+
+
+Sample 10 of 50.
+#
+NN initial normalized velocity residual: 0.00039
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09657   0.82894   0.13746   1.06232   0.06006   0.49996   0.01561   0.13889
+NN:    0.09603   0.85138   0.13862   1.20926   0.01626   0.00383   0.01529   0.13847
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09650   0.82815   0.13746   1.06232   0.06006   0.49996   0.01562   0.13875
+NN:    0.09597   0.85074   0.13862   1.07529   0.06402   0.51392   0.01526   0.13813
+
+
+Sample 11 of 50.
+#
+NN initial normalized velocity residual: 0.00107
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09568   0.84325   0.13746   1.07576   0.06006   0.49996   0.01560   0.14242
+NN:    0.09696   0.85378   0.15328   1.39192   0.01653   0.00371   0.01568   0.14191
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09555   0.84242   0.13746   1.07576   0.06006   0.49996   0.01552   0.14226
+NN:    0.09687   0.85330   0.15328   1.07360   0.06414   0.55762   0.01563   0.14145
+
+
+Sample 12 of 50.
+#
+NN initial normalized velocity residual: 0.00163
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09539   0.86171   0.13746   1.07780   0.06006   0.49996   0.01527   0.14218
+NN:    0.09563   0.88533   0.13772   1.08451   0.01870   0.00306   0.01421   0.12776
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09538   0.86196   0.13746   1.07780   0.06006   0.49996   0.01530   0.14243
+NN:    0.09561   0.88556   0.13772   1.08451   0.06135   0.60116   0.01420   0.12769
+
+
+Sample 13 of 50.
+#
+NN initial normalized velocity residual: 0.00205
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09472   0.89072   0.11641   1.07780   0.06855   0.62536   0.01325   0.12376
+NN:    0.09475   0.88900   0.11935   1.07781  -0.01472   0.00174   0.01328   0.12369
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09481   0.89191   0.11641   1.07780   0.06855   0.65143   0.01321   0.12286
+NN:    0.09485   0.89011   0.11643   1.07781   0.06739   0.64949   0.01319   0.12269
+
+
+Sample 14 of 50.
+#
+NN initial normalized velocity residual: 0.00123
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09648   0.89851   0.11641   1.07780   0.07147   0.69500   0.01300   0.12332
+NN:    0.09710   0.86487   0.22820   1.63130   0.01622   0.00392   0.01326   0.12727
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09644   0.89789   0.11641   1.07780   0.07147   0.69500   0.01302   0.12329
+NN:    0.09706   0.86416   0.12501   1.08176   0.06572   0.64504   0.01319   0.12659
+
+
+Sample 15 of 50.
+#
+NN initial normalized velocity residual: 0.00031
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09667   0.88475   0.11707   1.06832   0.06597   0.65945   0.01302   0.12334
+NN:    0.09660   0.86810   0.20681   1.11160   0.01563   0.00408   0.01332   0.12532
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09659   0.88393   0.11707   1.06832   0.06597   0.65945   0.01301   0.12306
+NN:    0.09653   0.86736   0.11907   1.07210   0.06539   0.64724   0.01324   0.12474
+
+
+Sample 16 of 50.
+#
+NN initial normalized velocity residual: 0.00026
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09824   0.85786   0.13492   1.06397   0.06597   0.56556   0.01428   0.13579
+NN:    0.09788   0.82529   0.14611   1.33060   0.01594   0.00389   0.01340   0.13358
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09817   0.85707   0.13492   1.06397   0.06597   0.56556   0.01428   0.13563
+NN:    0.09782   0.82443   0.13153   1.05842   0.06465   0.58735   0.01335   0.13290
+
+
+Sample 17 of 50.
+#
+NN initial normalized velocity residual: 0.00032
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09714   0.84857   0.13492   1.06397   0.06336   0.56556   0.01475   0.13461
+NN:    0.09639   0.86562   0.14585   1.08172   0.01826   0.00357   0.01549   0.13745
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09719   0.84874   0.13492   1.06397   0.06336   0.56556   0.01477   0.13489
+NN:    0.09645   0.86594   0.14585   1.08172   0.05997   0.56612   0.01548   0.13746
+
+
+Sample 18 of 50.
+#
+NN initial normalized velocity residual: 0.00034
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09654   0.85384   0.13492   1.07578   0.06336   0.56556   0.01486   0.13603
+NN:    0.09680   0.84865   0.12737   1.04973   0.01853   0.00354   0.01355   0.12540
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09657   0.85393   0.13492   1.07578   0.06336   0.56556   0.01489   0.13633
+NN:    0.09683   0.84883   0.12737   1.04973   0.06676   0.63107   0.01356   0.12540
+
+
+Sample 19 of 50.
+#
+NN initial normalized velocity residual: 0.00106
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09638   0.86554   0.13492   1.07578   0.06336   0.56556   0.01445   0.13693
+NN:    0.09659   0.85514   0.14732   1.38390   0.01738  -0.05290   0.01354   0.12906
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09631   0.86543   0.13492   1.07578   0.06336   0.56556   0.01445   0.13723
+NN:    0.09654   0.85521   0.13528   1.06356   0.06794   0.59803   0.01350   0.12868
+
+
+Sample 20 of 50.
+#
+NN initial normalized velocity residual: 0.00261
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09552   0.89168   0.11699   1.07578   0.06834   0.64446   0.01321   0.12296
+NN:    0.09583   0.87397   0.37929   1.14299  -0.01766   0.00384   0.01407   0.12621
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09544   0.89127   0.11699   1.07578   0.06834   0.64446   0.01319   0.12310
+NN:    0.09574   0.87351   0.13065   1.06839   0.06434   0.63130   0.01370   0.12596
+
+
+Sample 21 of 50.
+#
+NN initial normalized velocity residual: 0.00202
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09685   0.88327   0.12267   1.07578   0.06926   0.65095   0.01328   0.12695
+NN:    0.09567   0.86353   0.14316   1.36217   0.02157   0.00269   0.01431   0.13010
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09696   0.88401   0.12267   1.07578   0.06926   0.65095   0.01321   0.12680
+NN:    0.09579   0.86420   0.13514   1.08342   0.06183   0.59851   0.01422   0.12968
+
+
+Sample 22 of 50.
+#
+NN initial normalized velocity residual: 0.00053
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09868   0.85714   0.13570   1.06542   0.06766   0.56231   0.01419   0.13422
+NN:    0.09761   0.82915   0.14019   1.05781   0.02329   0.00204   0.01528   0.13955
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09876   0.85776   0.13570   1.06542   0.06766   0.56231   0.01417   0.13424
+NN:    0.09770   0.82969   0.14019   1.05781   0.06382   0.49162   0.01524   0.13948
+
+
+Sample 23 of 50.
+#
+NN initial normalized velocity residual: 0.00036
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09773   0.84261   0.13570   1.05871   0.06407   0.56231   0.01459   0.13423
+NN:    0.09632   0.86111   0.26270   1.08781  -0.01361   0.00216   0.01592   0.14252
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09783   0.84329   0.13570   1.05871   0.06407   0.56231   0.01456   0.13419
+NN:    0.09641   0.86196   0.14281   1.08781   0.06742   0.51549   0.01577   0.14217
+
+
+Sample 24 of 50.
+#
+NN initial normalized velocity residual: 0.00045
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09693   0.84999   0.13570   1.06990   0.06407   0.56231   0.01484   0.13627
+NN:    0.09689   0.84002   0.31370   1.55071  -0.00914   0.00337   0.01530   0.13630
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09691   0.84948   0.13570   1.06990   0.06407   0.56231   0.01487   0.13639
+NN:    0.09686   0.83950   0.13955   1.07522   0.06454   0.51647   0.01513   0.13593
+
+
+Sample 25 of 50.
+#
+NN initial normalized velocity residual: 0.00116
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09631   0.86783   0.13570   1.07524   0.06407   0.56231   0.01454   0.13436
+NN:    0.09564   0.83739   0.13834   1.13627   0.02019   0.00261   0.01550   0.15356
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09634   0.86817   0.13570   1.07524   0.06407   0.56231   0.01457   0.13458
+NN:    0.09566   0.83766   0.13834   1.07782   0.06434   0.45599   0.01552   0.15346
+
+
+Sample 26 of 50.
+#
+NN initial normalized velocity residual: 0.00195
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09493   0.88683   0.11689   1.07524   0.06533   0.61541   0.01326   0.12424
+NN:    0.09468   0.89226   0.14958   1.07786  -0.12384   0.00210   0.01363   0.12453
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09505   0.88802   0.11689   1.07524   0.06858   0.65058   0.01318   0.12333
+NN:    0.09484   0.89365   0.11643   1.07786   0.06830   0.64732   0.01330   0.12296
+
+
+Sample 27 of 50.
+#
+NN initial normalized velocity residual: 0.00242
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09611   0.88372   0.11689   1.07524   0.06720   0.66081   0.01283   0.12496
+NN:    0.09708   0.87275   0.20087   1.07649   0.01846   0.00202   0.01478   0.13467
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09619   0.88438   0.11689   1.07524   0.06720   0.66081   0.01280   0.12489
+NN:    0.09716   0.87338   0.14097   1.07649   0.06437   0.58326   0.01470   0.13447
+
+
+Sample 28 of 50.
+#
+NN initial normalized velocity residual: 0.00057
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09757   0.85698   0.13786   1.06677   0.06720   0.51886   0.01399   0.13476
+NN:    0.10073   0.82556   0.14903   1.12620   0.01574   0.00401   0.01374   0.14834
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09750   0.85608   0.13786   1.06677   0.06720   0.51886   0.01399   0.13445
+NN:    0.10069   0.82463   0.13138   1.07814   0.06737   0.51986   0.01372   0.14773
+
+
+Sample 29 of 50.
+#
+NN initial normalized velocity residual: 0.00033
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09708   0.83492   0.13786   1.06677   0.06720   0.51886   0.01483   0.13518
+NN:    0.09729   0.84055   0.14097   1.61014   0.01622   0.00381   0.01507   0.13750
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09701   0.83414   0.13786   1.06677   0.06720   0.51886   0.01484   0.13502
+NN:    0.09724   0.83980   0.14097   1.07722   0.06874   0.51373   0.01506   0.13690
+
+
+Sample 30 of 50.
+#
+NN initial normalized velocity residual: 0.00031
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09608   0.84172   0.13786   1.06830   0.06720   0.51886   0.01513   0.13625
+NN:    0.09595   0.87926   0.19382   1.22894   0.01754   0.00340   0.01330   0.12321
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09603   0.84120   0.13786   1.06830   0.06720   0.51886   0.01515   0.13637
+NN:    0.09591   0.87899   0.12049   1.06757   0.06345   0.63505   0.01326   0.12305
+
+
+Sample 31 of 50.
+#
+NN initial normalized velocity residual: 0.00092
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09607   0.86289   0.13786   1.07536   0.06830   0.51886   0.01511   0.14027
+NN:    0.09901   0.81514   0.14291   1.25181   0.01545   0.00402   0.01413   0.13630
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09601   0.86240   0.13786   1.07536   0.06830   0.51886   0.01512   0.14043
+NN:    0.09897   0.81445   0.13071   1.04562   0.06500   0.56269   0.01410   0.13582
+
+
+Sample 32 of 50.
+#
+NN initial normalized velocity residual: 0.00217
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09524   0.88723   0.11665   1.07536   0.06950   0.60019   0.01350   0.12526
+NN:    0.09502   0.83147   0.30924   1.62675  -0.31318  -0.63189   0.01533   0.15288
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09517   0.88717   0.11665   1.07536   0.06950   0.60019   0.01350   0.12555
+NN:    0.09499   0.83137   0.13513   1.07580   0.06587   0.48301   0.01465   0.15212
+
+
+Sample 33 of 50.
+#
+NN initial normalized velocity residual: 0.00119
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09614   0.89807   0.11665   1.07536   0.07023   0.68483   0.01320   0.12296
+NN:    0.09711   0.85394   0.14184   1.06952   0.01613   0.00392   0.01499   0.14091
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09609   0.89755   0.11665   1.07536   0.07023   0.68483   0.01321   0.12302
+NN:    0.09707   0.85326   0.14184   1.06952   0.06197   0.53156   0.01499   0.14056
+
+
+Sample 34 of 50.
+#
+NN initial normalized velocity residual: 0.00126
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09714   0.88466   0.13201   1.07536   0.06523   0.66116   0.01360   0.12531
+NN:    0.09620   0.85727   0.20983   1.50623  -0.09016   0.00424   0.01551   0.13702
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09706   0.88379   0.13201   1.07536   0.06523   0.66116   0.01359   0.12497
+NN:    0.09614   0.85640   0.14464   1.07526   0.06558   0.53557   0.01535   0.13603
+
+
+Sample 35 of 50.
+#
+NN initial normalized velocity residual: 0.00026
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09749   0.84956   0.14580   1.06021   0.05940   0.55907   0.01493   0.13558
+NN:    0.09771   0.84502   0.13840   1.07641   0.02128   0.00273   0.01474   0.13565
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09756   0.85005   0.14580   1.06021   0.05940   0.55907   0.01493   0.13571
+NN:    0.09779   0.84557   0.13840   1.07641   0.06647   0.52325   0.01471   0.13552
+
+
+Sample 36 of 50.
+#
+NN initial normalized velocity residual: 0.00033
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09612   0.85097   0.14580   1.06267   0.05940   0.55907   0.01532   0.13645
+NN:    0.09621   0.85211   0.14074   1.07552   0.01962   0.00317   0.01491   0.13680
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09616   0.85131   0.14580   1.06267   0.05940   0.55907   0.01535   0.13667
+NN:    0.09625   0.85251   0.14074   1.07552   0.06503   0.54614   0.01491   0.13678
+
+
+Sample 37 of 50.
+#
+NN initial normalized velocity residual: 0.00077
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09579   0.86131   0.14580   1.07703   0.05940   0.55907   0.01552   0.13957
+NN:    0.09779   0.83117   0.13249   1.05678   0.01833   0.00346   0.01420   0.13504
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09583   0.86163   0.14580   1.07703   0.05940   0.55907   0.01554   0.13981
+NN:    0.09783   0.83142   0.13249   1.05678   0.06505   0.56903   0.01420   0.13508
+
+
+Sample 38 of 50.
+#
+NN initial normalized velocity residual: 0.00121
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09424   0.87591   0.11645   1.07703   0.05940   0.56043   0.01346   0.13052
+NN:    0.09413   0.87335   0.22244   1.07466  -0.20385   0.00088   0.01369   0.13119
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09426   0.87732   0.11645   1.07703   0.05940   0.56043   0.01349   0.12922
+NN:    0.09420   0.87485   0.11629   1.07466   0.06357   0.57075   0.01332   0.12957
+
+
+Sample 39 of 50.
+#
+NN initial normalized velocity residual: 0.00128
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09526   0.89598   0.11645   1.07703   0.06906   0.68563   0.01326   0.12307
+NN:    0.09738   0.85540   0.21370   1.06712   0.00093   0.00269   0.01429   0.13440
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09537   0.89689   0.11645   1.07703   0.06906   0.68563   0.01320   0.12265
+NN:    0.09751   0.85625   0.13384   1.06712   0.06779   0.58776   0.01411   0.13399
+
+
+Sample 40 of 50.
+#
+NN initial normalized velocity residual: 0.00133
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09627   0.89446   0.11645   1.07703   0.07366   0.70184   0.01298   0.12318
+NN:    0.09787   0.87469   0.14470   1.07319   0.02316   0.00210   0.01461   0.13476
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09637   0.89519   0.11645   1.07703   0.07366   0.70184   0.01294   0.12301
+NN:    0.09797   0.87541   0.14470   1.07319   0.06577   0.56497   0.01457   0.13448
+
+
+Sample 41 of 50.
+#
+NN initial normalized velocity residual: 0.00034
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09664   0.88702   0.11765   1.06516   0.07218   0.69001   0.01292   0.12377
+NN:    0.09808   0.84137   0.14427   1.07600   0.02363   0.00191   0.01590   0.14429
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09670   0.88772   0.11765   1.06516   0.07218   0.69001   0.01292   0.12365
+NN:    0.09815   0.84195   0.14427   1.07600   0.06139   0.52475   0.01590   0.14421
+
+
+Sample 42 of 50.
+#
+NN initial normalized velocity residual: 0.00022
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09740   0.87177   0.13812   1.07905   0.06632   0.51690   0.01416   0.13464
+NN:    0.09757   0.86831   0.21866   1.07859   0.01757   0.00338   0.01416   0.13493
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09736   0.87125   0.13812   1.07905   0.06632   0.51690   0.01418   0.13474
+NN:    0.09754   0.86793   0.13971   1.07859   0.06918   0.51414   0.01410   0.13479
+
+
+Sample 43 of 50.
+#
+NN initial normalized velocity residual: 0.00031
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09700   0.84722   0.13812   1.07905   0.06304   0.51690   0.01511   0.13812
+NN:    0.09740   0.87603   0.14723   1.06649   0.01745   0.00347   0.01359   0.13003
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09697   0.84662   0.13812   1.07905   0.06304   0.51690   0.01514   0.13818
+NN:    0.09737   0.87568   0.12932   1.06649   0.07088   0.61250   0.01359   0.12989
+
+
+Sample 44 of 50.
+#
+NN initial normalized velocity residual: 0.00031
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09608   0.84708   0.13812   1.07905   0.06304   0.51690   0.01536   0.13652
+NN:    0.09703   0.85955   0.12987   1.06083   0.01817   0.00324   0.01328   0.12603
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09606   0.84667   0.13812   1.07905   0.06304   0.51690   0.01540   0.13671
+NN:    0.09701   0.85928   0.12987   1.06083   0.06669   0.62855   0.01329   0.12594
+
+
+Sample 45 of 50.
+#
+NN initial normalized velocity residual: 0.00062
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09598   0.85950   0.13812   1.07905   0.06304   0.51690   0.01545   0.14001
+NN:    0.09608   0.86110   0.20380   1.32028  -0.07769   0.00399   0.01535   0.14086
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09592   0.85885   0.13812   1.07905   0.06304   0.51690   0.01546   0.14003
+NN:    0.09604   0.86064   0.14202   1.07547   0.06065   0.55079   0.01521   0.14054
+
+
+Sample 46 of 50.
+#
+NN initial normalized velocity residual: 0.00196
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09482   0.87924   0.11785   1.07001   0.06304   0.58331   0.01363   0.12576
+NN:    0.09548   0.81182   0.34697   1.57265  -0.38885  -0.56659   0.01405   0.12954
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09476   0.87920   0.11785   1.07001   0.06304   0.58331   0.01363   0.12605
+NN:    0.09546   0.81167   0.12139   1.05242   0.06439   0.57032   0.01298   0.12862
+
+
+Sample 47 of 50.
+#
+NN initial normalized velocity residual: 0.00099
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09709   0.87600   0.13222   1.07001   0.07024   0.61296   0.01394   0.13161
+NN:    0.09750   0.84751   0.15860   1.06442   0.01654   0.00380   0.01526   0.14132
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09706   0.87547   0.13222   1.07001   0.07024   0.61296   0.01397   0.13170
+NN:    0.09747   0.84689   0.13848   1.06442   0.06036   0.50204   0.01525   0.14104
+
+
+Sample 48 of 50.
+#
+NN initial normalized velocity residual: 0.00132
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09719   0.85885   0.13222   1.07001   0.06380   0.61296   0.01408   0.13224
+NN:    0.09712   0.87086   0.17600   1.26350  -0.02830   0.00408   0.01560   0.13741
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09713   0.85794   0.13222   1.07001   0.06380   0.61296   0.01408   0.13189
+NN:    0.09708   0.87015   0.14178   1.07506   0.05906   0.56943   0.01553   0.13692
+
+
+Sample 49 of 50.
+#
+NN initial normalized velocity residual: 0.00045
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09690   0.84079   0.13222   1.05884   0.06380   0.61296   0.01419   0.12854
+NN:    0.09609   0.87297   0.18496   1.07296  -0.08286   0.00343   0.01534   0.13368
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09693   0.84095   0.13222   1.05884   0.06380   0.61296   0.01422   0.12881
+NN:    0.09613   0.87335   0.14195   1.07296   0.05885   0.59244   0.01523   0.13364
+
+
+Sample 50 of 50.
+#
+NN initial normalized velocity residual: 0.00085
+#
+Statistics of aerodynamic coefficients
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09727   0.81695   0.13792   1.07181   0.06380   0.52303   0.01521   0.13428
+NN:    0.09676   0.86327   0.20508   1.06988  -0.10094   0.00342   0.01440   0.13033
+#
+With 50 step / t=0.050 transient cutoff:
+       mean_Cd   mean_Cl   max_Cd    max_Cl    min_Cd    min_Cl    std_Cd    std_Cl   
+True:  0.09725   0.81697   0.13792   1.07181   0.06380   0.52303   0.01524   0.13459
+NN:    0.09674   0.86358   0.13387   1.06388   0.06589   0.60390   0.01424   0.13023
+
+

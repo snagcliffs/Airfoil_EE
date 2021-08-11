@@ -1,0 +1,38 @@
+#
+# nek parameter file
+#
+
+[GENERAL]
+stopAt = endTime
+endTime = 10
+dt = 0.001
+variableDt = no
+
+targetCFL = 3.0
+timeStepper = BDF2
+extrapolation = OIFS
+writeControl = runTime
+writeInterval = 0.25
+dealiasing = yes
+
+filtering = explicit
+filterWeight = 0.02
+filterCutoffRatio = 0.65
+
+userParam01 = 10000
+userParam02 = 10
+
+[PROBLEMTYPE]
+equation = incompNS
+stressFormulation = no
+
+[PRESSURE]
+residualTol = 1e-8
+residualProj = yes
+
+[VELOCITY]
+residualTol = 1e-8
+residualProj = no
+density = 1.0
+viscosity = 5.714285714285714e-05
+advection = yes
