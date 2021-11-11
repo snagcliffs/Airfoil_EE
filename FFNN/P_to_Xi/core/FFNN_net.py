@@ -10,16 +10,6 @@ class pressure_encoder(tf.keras.Model):
 
     def __init__(self, data_params=None, net_params=None, learning_params=None, restart_file=None, restart_dict=None):
         """
-        Inputs:
-            n
-            m_hist
-            r
-            p
-            encoder_layer_sizes
-            branch_layers_sizes
-            trunk_layers_sizes
-            dim
-
         May also be initialized using a restart file (for a saved dictionary) or by the dictionary itself.
         """
 
@@ -164,8 +154,9 @@ class pressure_encoder(tf.keras.Model):
         
         with tf.GradientTape() as tape:
             loss = self.compute_loss(P, U, r)
+            reg_loss = loss + tf.reduce_sum(self.encoder_net.losses)+tf.reduce_sum(self.decoder_net.losses)
 
-        gradients = tape.gradient(loss, self.trainable_variables)
+        gradients = tape.gradient(reg_loss, self.trainable_variables)
         self.optimizer.apply_gradients(zip(gradients, self.trainable_variables))
         
         return loss

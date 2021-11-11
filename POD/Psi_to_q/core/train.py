@@ -111,7 +111,7 @@ if __name__ == "__main__":
     parser.add_argument('--decay_rate', default=0.95, type=int, help='Decay rate')
     parser.add_argument('--decay_steps', default=None, help='Decay stesps')
     parser.add_argument('--l1_reg', default=0, type=int, help='L1 penalty on NN weights')
-    parser.add_argument('--l2_reg', default=1e-3, type=int, help='L2 penalty on NN weights')
+    parser.add_argument('--l2_reg', default=0, type=int, help='L2 penalty on NN weights')
     parser.add_argument('--n_restarts', default=3, type=int, help='Number of restarts.')
     parser.add_argument('--epochs', default=5000, type=int, help='Number of epochs.')
     parser.add_argument('--batch_size', default=1000, type=int, help='Batch size')

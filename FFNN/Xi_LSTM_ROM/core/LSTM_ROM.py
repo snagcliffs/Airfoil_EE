@@ -120,8 +120,9 @@ class LSTM_ROM(tf.keras.Model):
         
         with tf.GradientTape() as tape:
             loss = self.compute_loss(Xi_hist, Xi_forecast)
+            reg_loss = loss + tf.reduce_sum(self.network.losses)
 
-        gradients = tape.gradient(loss, self.trainable_variables)
+        gradients = tape.gradient(reg_loss, self.trainable_variables)
         self.optimizer.apply_gradients(zip(gradients, self.trainable_variables))
         
         return loss
