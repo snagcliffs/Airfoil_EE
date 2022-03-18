@@ -87,7 +87,7 @@ class P_to_EE_generator():
         smoother_kern = gaussian(width_smoother, scale_smoother)
         smoother_kern = smoother_kern/np.sum(smoother_kern)
 
-        # Quantity of interest as smoothed quotient Cd/Cl
+        # Quantity of interest as smoothed Cd
         inds = np.argmin(np.abs(self.P_time[0] + self.tau - fc_time)) + np.arange(self.m + (self.m_hist-1)*self.stride)
         self.q = filters.convolve1d(Cd, smoother_kern)
         self.q = (self.q - np.mean(self.q))/np.std(self.q)

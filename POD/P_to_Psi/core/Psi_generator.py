@@ -1,34 +1,9 @@
 import numpy as np
 import os
 
-"""
-To do:
-n/a
-
-"""
-
 class Psi_Generator():
     """
     Generator object for predicting POD time series from pressure sensors.
-
-    Inputs:
-
-        data_path   :  path to saved dataset. We assume there esist files
-                       data_path/P.npy
-                       data_path/q.npy
-        POD_path    :  path to saved POD time series
-        batch_size  :  number of snapshots in each batch
-        S           :  list of indices of pres_hist to use as input
-        min_time    :  minimum time to use in training
-        m_hist      :  
-        stride      :  
-        time_func   :  used for weighing certain times more than others
-        tau         :  lead time used to compute loss weights as a function of time
-        train_frac  :  
-        val_frac    :  
-
-    Returns:
-
     """
     
     def __init__(self, 
@@ -185,7 +160,8 @@ class Psi_Generator():
 
     def compute_time_weights(self):
         """
-        Computes weighted loss funciton: r(t) = time_func(q(t+tau))
+        Computes weighted loss funciton: r(t) = time_func(q(t+tau)).
+        This is not currently used.
         """
 
         if self.time_func is None: 

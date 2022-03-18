@@ -5,19 +5,6 @@ tf.keras.backend.set_floatx('float64')
 class LSTM_ROM(tf.keras.Model):
 
     def __init__(self, data_params=None, net_params=None, learning_params=None, restart_file=None, restart_dict=None):
-        """
-        Inputs:
-            n
-            m_hist
-            r
-            p
-            encoder_layer_sizes
-            branch_layers_sizes
-            trunk_layers_sizes
-            dim
-
-        May also be initialized using a restart file (for a saved dictionary) or by the dictionary itself.
-        """
 
         if restart_dict is None and restart_file is not None:
             restart_dict = np.load(restart_file,allow_pickle=True).item()

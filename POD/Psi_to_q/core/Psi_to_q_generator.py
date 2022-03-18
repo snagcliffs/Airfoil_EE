@@ -1,11 +1,6 @@
 import numpy as np
 from numba import njit
 from tqdm import tqdm
-"""
-To do:
-n/a
-
-"""
 
 class Psi_to_q_generator():
     """
@@ -175,9 +170,6 @@ class Psi_to_q_generator():
         return Psi_hist_batch
 
     def get_batch(self, batch_inds):
-        """
-        What is different if I want to include history terms here?
-        """
 
         if self.m_hist > 1:
             Psi_batch = self.get_Psi_hist(self.Psi, batch_inds, self.m_hist, self.stride)

@@ -9,9 +9,6 @@ n/a
 np.random.seed(0)
 
 class P_gen():
-    """
-
-    """
     
     def __init__(self, 
                  data_path,

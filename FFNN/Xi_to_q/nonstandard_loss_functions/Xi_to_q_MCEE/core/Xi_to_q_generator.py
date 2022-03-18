@@ -174,9 +174,6 @@ class Xi_to_q_generator():
         return Xi_hist_batch
 
     def get_batch(self, batch_inds):
-        """
-        What is different if I want to include history terms here?
-        """
 
         if self.m_hist > 1:
             Xi_batch = self.get_Xi_hist(self.Xi, batch_inds, self.m_hist, self.stride)

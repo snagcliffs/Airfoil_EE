@@ -1,43 +1,10 @@
 import numpy as np
 import os
 
-"""
-To do:
-n/a
-
-"""
-
 class FFNN_Generator():
     """
     Generator object for nonlinear flow reconstruction from pressure sensors.
     May also return single snapshots for visualization.
-
-    Inputs:
-
-        data_path   :  path to saved dataset. We assume there esist files
-                       data_path/Cx.npy 
-                       data_path/Cy.npy
-                       data_path/dist.npy
-                       data_path/mass.npy
-                       data_path/P.npy
-                       data_path/forceCoeffs.npy
-                       data_path/numpy_files/vel(index).npy
-                       data_path/numpy_files/snapshot_times.npy
-
-        batch_size  :  number of snapshots in each batch
-        n_g         :  number of
-        S           :  list of indices of pres_hist to use as input
-        ind_min     :  number of transient files to skip
-        m_hist      :  
-        stride      :  
-        dist_func   :  
-        time_func   :  
-        tau         :  lead time used to compute loss weights as a function of time
-        train_frac  :  
-        val_frac    :  
-
-    Returns:
-
     """
     
     def __init__(self, 
@@ -223,7 +190,8 @@ class FFNN_Generator():
 
     def compute_time_weights(self):
         """
-        Computes weighted loss funciton: r(t) = time_func(q(t+tau))
+        Computes weighted loss funciton: r(t) = time_func(q(t+tau)).
+        Not currently used
         """
 
         if self.time_func is None: 

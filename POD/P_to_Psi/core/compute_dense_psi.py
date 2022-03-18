@@ -7,7 +7,6 @@ from tqdm import tqdm
 def compute_Psi(model, datapath, savepath, stride):
 
     # Load pressure from file
-    # Skip first line since it has a shorter timestep.  Data is otherwise uniformly spaced.
     S = int(100 / model.n) * np.arange(model.n)
     PT = np.load(datapath + 'P.npy')
     P_time = PT[:,0]

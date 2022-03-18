@@ -5,19 +5,6 @@ tf.keras.backend.set_floatx('float64')
 class P_to_EE_net(tf.keras.Model):
 
     def __init__(self, data_params=None, net_params=None, learning_params=None, restart_file=None, restart_dict=None):
-        """
-        Inputs:
-            n
-            m_hist
-            r
-            p
-            encoder_layer_sizes
-            branch_layers_sizes
-            trunk_layers_sizes
-            dim
-
-        May also be initialized using a restart file (for a saved dictionary) or by the dictionary itself.
-        """
 
         if restart_dict is None and restart_file is not None:
             restart_dict = np.load(restart_file,allow_pickle=True).item()
@@ -64,9 +51,7 @@ class P_to_EE_net(tf.keras.Model):
             self.test_loss = restart_dict['test_loss']
 
     def build_network(self):
-        """
-        Encoder LSTM
-        """
+
         if self.m_hist == 1: layers = [tf.keras.layers.Input(shape=(self.r))]    
         else: layers = [tf.keras.layers.Input(shape=(self.m_hist,self.r))]
         

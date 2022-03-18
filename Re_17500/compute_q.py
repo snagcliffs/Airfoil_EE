@@ -34,7 +34,7 @@ def save_q(min_time):
     smoother_kern = gaussian(width_smoother, scale_smoother)
     smoother_kern = smoother_kern/np.sum(smoother_kern)
 
-    # Quantity of interest as smoothed quotient Cd/Cl
+    # Quantity of interest as smoothed quotient Cd
     q = filters.convolve1d(Cd, smoother_kern)
     q = (q - np.mean(q[min_ind:]))/np.std(q[min_ind:])
 

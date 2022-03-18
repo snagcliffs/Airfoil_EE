@@ -1,10 +1,5 @@
 import numpy as np
 from numba import njit
-"""
-To do:
-n/a
-
-"""
 
 np.random.seed(0)
 
