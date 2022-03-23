@@ -24,7 +24,6 @@ def compute_Qi_KL(y, z, Tp=1, Tm=1, alpha=0):
     This is similar Eq. 8 from Qi and Majda, PNAS 2020.
     In the paper they use alpha=1, but since we are looking at y,z>0, we use alpha=0
     We are also taking the KL divergence between time series, rather than across dimensions at a single timestep.
-
     y is prediction
     z is target
     """
@@ -139,11 +138,11 @@ if __name__ == "__main__":
     H_psi_save_file = './error_statistics/H_psi_errors'
     H_xi_save_file = './error_statistics/H_xi_errors'
 
-#     compute_and_save_errors(np.load(F_p_results_file, allow_pickle=True).item(), F_p_save_file, smooth=False)
-#     compute_and_save_errors(np.load(F_psi_results_file, allow_pickle=True).item(), F_psi_save_file, smooth=False)
-#     compute_and_save_errors(np.load(F_xi_results_file, allow_pickle=True).item(), F_xi_save_file, smooth=False)
-#     compute_and_save_errors(np.load(H_p_results_file, allow_pickle=True).item(), H_p_save_file)
-#     compute_and_save_errors(np.load(H_psi_results_file, allow_pickle=True).item(), H_psi_save_file)
+    compute_and_save_errors(np.load(F_p_results_file, allow_pickle=True).item(), F_p_save_file, smooth=False)
+    compute_and_save_errors(np.load(F_psi_results_file, allow_pickle=True).item(), F_psi_save_file, smooth=False)
+    compute_and_save_errors(np.load(F_xi_results_file, allow_pickle=True).item(), F_xi_save_file, smooth=False)
+    compute_and_save_errors(np.load(H_p_results_file, allow_pickle=True).item(), H_p_save_file)
+    compute_and_save_errors(np.load(H_psi_results_file, allow_pickle=True).item(), H_psi_save_file)
     compute_and_save_errors(np.load(H_xi_results_file, allow_pickle=True).item(), H_xi_save_file)
 
 

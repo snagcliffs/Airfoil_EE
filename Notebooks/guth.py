@@ -20,7 +20,11 @@ def precision(a,b,a_hat,b_hat):
     
     TP = np.sum(a_class*b_class)
     FP = np.sum((1-a_class)*b_class)
-    s = TP/(TP+FP)
+    
+    if TP+FP==0: 
+        s = 0
+    else:
+        s = TP/(TP+FP)
     
     return s
 
@@ -43,11 +47,14 @@ def recall(a,b,a_hat,b_hat):
     
     TP = np.sum(a_class*b_class)
     FN = np.sum(a_class*(1-b_class))
-    r = TP/(TP+FN)
+    
+    if TP+FN==0: 
+        r = 1
+    else:
+        r = TP/(TP+FN)
     
     return r
 
-@nb.njit
 def F1_score(a,b,a_hat,b_hat):
     """
     F1 score of classifier (b >= b_hat) for truth (a >= a_hat)

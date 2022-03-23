@@ -22,8 +22,8 @@ if __name__ == "__main__":
     F_psi_save_file = 'F_psi_results'
     F_xi_save_file = 'F_xi_results'
 
-    save_results_dict(F_p_results_path, F_p_save_file)
-    save_results_dict(F_psi_results_path, F_psi_save_file)
+#     save_results_dict(F_p_results_path, F_p_save_file)
+#     save_results_dict(F_psi_results_path, F_psi_save_file)
     save_results_dict(F_xi_results_path, F_xi_save_file)
 
 

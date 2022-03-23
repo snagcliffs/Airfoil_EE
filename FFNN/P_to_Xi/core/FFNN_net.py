@@ -138,6 +138,10 @@ class pressure_encoder(tf.keras.Model):
 
     @tf.function
     def compute_loss(self, P, U, r):
+        """
+        Optimization sometimes plateus if unscaled MSE is given, perhaps due to numerical issues with small MSE.
+        Multiplying by large constant (1000) helped.  Similar results could likely be achieved via scaling learning rate.
+        """
 
         U_hat = self.reconstruct(P)
 

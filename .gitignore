@@ -41,3 +41,25 @@ __pycache__/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Nek output files
+Re_17500/numpy_files/*
+Re_17500/outfiles/*
+Re_17500/fine_sample_movie
+
+# Files found by search for large files
+# run: find * -size +100M | cat >> .gitignore
+######################
+FFNN/Xi_LSTM_ROM/notebooks/Xi_ROM_32_error.npy
+FFNN/P_to_Xi/saved_models/FFNN_16.npy
+FFNN/P_to_Xi/saved_models/FFNN_8.npy
+FFNN/P_to_Xi/saved_models/FFNN_32.npy
+FFNN/P_to_Xi/saved_models/FFNN_64.npy
+P_LSTM_ROM/saved_models/P_ROM_results_list.npy
+P_LSTM_ROM/notebooks/P_ROM_error.npy
+POD/Psi_LSTM_ROM/notebooks/Psi_ROM_32_error.npy
+POD/POD_files/midEps_Phi.npy
+POD/POD_files/bdry_Phi.npy
+POD/POD_files/close_Phi.npy
+POD/POD_files/mid_Phi.npy
+POD/POD_files/full_Phi.npy

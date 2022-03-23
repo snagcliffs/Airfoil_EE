@@ -87,7 +87,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     # Data
-    parser.add_argument('--data_path', default='../Re_17500/', type=str, help='Path to datasets')
+    parser.add_argument('--data_path', default='../../Re_17500/', type=str, help='Path to datasets')
     parser.add_argument('--save_path', default='./saved_results/', type=str, help='Path to save results')
     parser.add_argument('--save_file', default='P_to_q', type=str, help='File name for saved results')
 

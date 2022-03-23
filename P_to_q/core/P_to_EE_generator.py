@@ -16,7 +16,7 @@ class P_to_EE_generator():
     """
     
     def __init__(self, 
-                 data_path='../Re_17500/', 
+                 data_path='../../Re_17500/', 
                  tau=0, 
                  batch_size=10, 
                  min_time=70, 
@@ -39,7 +39,7 @@ class P_to_EE_generator():
         self.contiguous_sets = contiguous_sets
 
         # Load grid locations, snapshot times, and distance to wall boundary
-        P = np.load(data_path + 'P_reg.npy')
+        P = np.load(data_path + 'P.npy')
         min_ind = np.min(np.where(P[:,0] > self.min_time))-(self.m_hist-1)*self.stride
         
         if self.tau != 0:
@@ -70,7 +70,7 @@ class P_to_EE_generator():
     def load_force_coeffs(self):
 
         # Load force coefficients
-        forceCoeffs = np.load(self.data_path+'forceCoeffs_reg.npy')
+        forceCoeffs = np.load(self.data_path+'forceCoeffs.npy')
         fc_time = forceCoeffs[100:,0]
         Cd = forceCoeffs[100:,1]
         Cl = forceCoeffs[100:,2]
