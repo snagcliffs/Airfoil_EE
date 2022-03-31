@@ -129,10 +129,7 @@ def parse_history_points(n_hist_top, n_hist_bottom):
 
 def write_par_files(T,dt,dT,Re,alpha0,hist_freq):
     """
-    Write .par file for each of the two meshes
-
-    userParam01 is used by pitch.usr to determine which mesh is being used.  This helps with writing the mass matrices
-    forceCoeffs.dat
+    Write .par file
     """
 
     par_lines = ['#',\

@@ -16,10 +16,7 @@ def write_mesh():
 
 def write_par(T,dt,Re,start_file):
     """
-    Write .par file for each of the two meshes
-
-    userParam01 is used by pitch.usr to determine which mesh is being used.  This helps with writing the mass matrices
-    forceCoeffs.dat
+    Write .par file
     """
 
     par_lines = ['#',\

@@ -26,10 +26,7 @@ def write_mesh():
 
 def write_par(T,dt,Re,start_file):
     """
-    Write .par file for each of the two meshes
-
-    userParam01 is used by pitch.usr to determine which mesh is being used.  This helps with writing the mass matrices
-    forceCoeffs.dat
+    Write .par file
     """
 
     par_lines = ['#',\
@@ -245,7 +242,10 @@ def main(args):
     mass = np.load(datapath+'mass.npy')
     n = mass.size
     mass = np.stack([mass,mass]).reshape(n,2)
-    mean_flow = np.load('../../../POD/POD_files/mean_flow.npy').reshape(n,2)
+
+    # Note that result summary files did not use order='F' and thus have artificially low reported initial 
+    # velocity residual.  This does not affect other results.
+    mean_flow = np.load('../../../POD/POD_files/mean_flow.npy').reshape(n,2,order='F')
     
     snapshot_times = gen.snapshot_times
 
